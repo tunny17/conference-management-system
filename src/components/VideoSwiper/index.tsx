@@ -52,9 +52,9 @@ const VideoSlider = ({ videos }: any) => {
           <path
             d="M11.6176 1.32565L1.02648 11.7332L11.4341 22.3243M1.02648 11.7332L25.025 11.9429L1.02648 11.7332Z"
             stroke="#C4C4C4"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </button>
@@ -66,9 +66,9 @@ const VideoSlider = ({ videos }: any) => {
           <path
             d="M14.7067 22.5469L25.2064 12.0471L14.7067 1.54741M25.2064 12.0471L1.20703 12.0471L25.2064 12.0471Z"
             stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </button>

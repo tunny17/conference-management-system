@@ -57,8 +57,9 @@ const Navigation = () => {
           </button>
 
           <ul className="flex items-center gap-7">
-            {navs.map((nav) => (
+            {navs.map((nav, i) => (
               <Link
+                key={i}
                 to={`${nav.path}`}
                 className={`text-sm flex items-center gap-4 ${
                   currentPath === nav.path ? 'font-bold text-primary-light' : ''
@@ -82,9 +83,9 @@ const Navigation = () => {
             <path
               d="M1.29855 11.5806H19.2986M1.29855 6.58057H19.2986M1.29855 1.58057H19.2986"
               stroke="#474747"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
