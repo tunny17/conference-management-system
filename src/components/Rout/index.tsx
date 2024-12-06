@@ -23,7 +23,7 @@ const Rout = () => {
       <Route path="/schedule" element={<Schedule />} />
       <Route path="/workshop" element={<Workshop />} />
       <Route path="/gallery" element={<Gallery />} />
-      <Route path="/speakers" element={<Speakers />} />
+      <Route path="/keynote-speakers" element={<Speakers />} />
       <Route path="/committee" element={<Committee />} />
       <Route path="/call-for-papers" element={<CallForPapers />} />
       <Route path="/research-talk" element={<ResearchTalk />} />

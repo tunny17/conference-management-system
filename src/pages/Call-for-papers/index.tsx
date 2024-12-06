@@ -26,8 +26,8 @@ const CallForPapers = () => {
       </div>
 
       <section className="px-[6%] py-20 bg-cover bg-center">
-        <div className="flex justify-between items-start">
-          <div className="w-[60%]">
+        <div className="flex flex-col-reverse md:flex-row gap-y-10 justify-between items-start">
+          <div className="w-full md:w-[60%]">
             <h1 className="text-2xl font-bold mb-2">
               Details can also be found in the call for Papers PDF file:
             </h1>
@@ -90,7 +90,7 @@ const CallForPapers = () => {
             </div>
           </div>
 
-          <div className="flex flex-col shadow-md p-2 w-[30%] px-5  h-fit rounded-md">
+          <div className="flex flex-col shadow-md p-2 w-full md:w-[30%] px-5  h-fit rounded-md">
             <h2 className="font-bold my-4">Important Deadlines</h2>
 
             {important.map((item, i) => (
@@ -111,20 +111,20 @@ const CallForPapers = () => {
           </div>
         </div>
 
-        <div className="px-10 py-10 mt-10 bg-[#FAFDFF]">
-          <h1 className="text-base font-extrabold mb-3">Paper Categories</h1>
-          <p className="helvetica-light text-sm leading-6 mb-5">
+        <div className="md:px-10 py-10 mt-10 md:bg-[#FAFDFF]">
+          <h1 className="text-2xl md:text-base font-extrabold mb-3">Paper Categories</h1>
+          <p className="helvetica-light text-base md:text-sm leading-6 mb-5">
             Regular Paper – 7 pages maximum (3 additional pages allowed but at an extra charge){' '}
             <br /> • Short Paper (Work-in-Progress) – 6 pages maximum (2 additional pages allowed
             but at an extra charge)
           </p>
-          <p className="helvetica-light text-sm mb-5">
+          <p className="helvetica-light text-base md:text-sm mb-5">
             Regular papers should present novel perspectives within the general scope of the
             conference. Short papers (Work-in-Progress) are an opportunity to present preliminary or
             interim results.
           </p>
 
-          <ul className="helvetica-light text-sm list-disc px-16 leading-6 flex flex-col flex-wrap h-[55vh]">
+          <ul className="helvetica-light text-base md:text-sm list-disc px-5 md:px-16 leading-6 flex flex-col md:flex-wrap md:h-[55vh]">
             {categories.map((item, i) => (
               <li key={i} className="helvetica-regular font-light text-sm leading-7">
                 {item}
@@ -142,7 +142,7 @@ const CallForPapers = () => {
 
         <div>
           <h1 className="text-base font-medium mb-3">Conference Policy</h1>
-          <p className="helvetica-light text-sm leading-6 mb-5">
+          <p className="helvetica-light text-base md:text-sm leading-6 mb-5">
             Kindly read it from{' '}
             <a
               className="helvetica-regular underline"
@@ -151,23 +151,23 @@ const CallForPapers = () => {
               HERE
             </a>{' '}
           </p>
-          <p className="helvetica-light text-sm leading-6 mb-5">
+          <p className="helvetica-light text-base md:text-sm leading-6 mb-5">
             PAPER SUBMISSION INSTRUCTION [ONLY FOR REVIEW MANUSCRIPT]
           </p>
-          <p className="helvetica-light text-sm leading-6 mb-5">
+          <p className="helvetica-light text-base md:text-sm leading-6 mb-5">
             All submitted articles will be evaluated on their quality and relevance using
             double-blind peer review, which hides the authors’ identity from the reviewers. All
             review manuscripts should fulfill the double-blind submission guidelines for review
             purpose. When preparing your proposal, please take the following procedure as a minimum:
           </p>
-          <ul className="helvetica-light text-sm list-disc px-3 leading-6">
-            <li className="helvetica-regular font-light text-sm leading-7">
+          <ul className="helvetica-light text-base md:text-sm list-disc px-3 leading-6">
+            <li className="helvetica-regular font-light text-base md:text-sm leading-7">
               Eliminate the authors’ names and affiliations from the title page.
             </li>
-            <li className="helvetica-regular font-light text-sm leading-7">
+            <li className="helvetica-regular font-light text-base md:text-sm leading-7">
               Receipts of identifying names and financial sources should not be there.
             </li>
-            <li className="helvetica-regular font-light text-sm leading-7">
+            <li className="helvetica-regular font-light text-base md:text-sm leading-7">
               Papers should follow the{' '}
               <a
                 className="helvetica-regular underline"

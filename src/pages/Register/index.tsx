@@ -32,8 +32,8 @@ const Register = () => {
       </div>
 
       <section className="px-[10%] mb-10 py-10">
-        <div className="flex justify-between items-start">
-          <div className="w-[45%]">
+        <div className="flex flex-col-reverse md:flex-row gap-y-7 justify-between items-start">
+          <div className="w-full md:w-[45%]">
             <h1 className="text-2xl font-bold mb-2">Registration Details</h1>
             <p className="helvetica-light text-sm mb-3 leading-7 text-[#474747]">
               *If you are a student and presenting a paper you MUST register in the Author
@@ -53,7 +53,7 @@ const Register = () => {
             </p>
           </div>
 
-          <div className="flex flex-col shadow-md p-2 w-[30%] px-5  h-fit rounded-md">
+          <div className="flex flex-col shadow-md p-2 w-full md:w-[30%] px-5  h-fit rounded-md">
             <h2 className="font-bold my-4">Important Deadlines</h2>
 
             {important.map((item, i) => (
@@ -90,9 +90,12 @@ const Register = () => {
         </div>
 
         {/* --- author registration */}
-        <section className="flex justify-between">
+        <section className="flex flex-col md:flex-row gap-y-7 justify-between">
           {authorRegistration[isAuthorOn ? 1 : 0].sales.map((item, i) => (
-            <div key={i} className="p-3 w-[25%] border border-[#FFFFFF] rounded-md shadow-sm">
+            <div
+              key={i}
+              className="p-3 w-full md:w-[25%] border border-[#FFFFFF] rounded-md shadow-sm"
+            >
               <p className="text-sm">{item.members}</p>
 
               <div className="flex justify-between items-end mt-2 py-3">
@@ -138,9 +141,12 @@ const Register = () => {
           </div>
         </div>
 
-        <section className="flex justify-between">
+        <section className="flex flex-col md:flex-row gap-y-7 justify-between">
           {attendeeRegistration[isAttendeeOn ? 1 : 0].sales.map((item, i) => (
-            <div key={i} className="p-3 w-[25%] border border-[#FFFFFF] rounded-md shadow-sm">
+            <div
+              key={i}
+              className="p-3 w-full md:w-[25%] border border-[#FFFFFF] rounded-md shadow-sm"
+            >
               <p className="text-sm">{item.members}</p>
 
               <div className="flex justify-between items-end mt-2 py-3">
@@ -174,14 +180,14 @@ const Register = () => {
             All fees are in US Dollars and include all applicable taxes
           </p>
 
-          <div className="flex justify-between mt-8">
-            <a href="" className="w-[30%]">
+          <div className="flex flex-col md:flex-row gap-y-7 justify-between mt-8">
+            <a href="" className="w-full md:w-[30%]">
               <img src="/public/pay-1.png" alt="" />
             </a>
-            <a href="" className="w-[30%]">
+            <a href="" className="w-full md:w-[30%]">
               <img src="/public/pay-2.png" alt="" />
             </a>
-            <a href="" className="w-[30%]">
+            <a href="" className="w-full md:w-[30%]">
               <img src="/public/pay-3.png" alt="" />
             </a>
           </div>

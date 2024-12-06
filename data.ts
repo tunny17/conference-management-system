@@ -42,6 +42,83 @@ export const slider = [
   }
 ];
 
+export const Resources = [
+  {
+    title: 'Conference Pages',
+    navs: [
+      {
+        title: 'Schedule',
+        text: 'See your daily schedules ahead of the Conference',
+        image: 'schedule-1',
+        url: '/schedule'
+      },
+      {
+        title: 'Workshop',
+        text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint.',
+        image: 'schedule-2',
+        url: '/workshop'
+      },
+      {
+        title: 'Gallery',
+        text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
+        image: 'schedule-3',
+        url: '/gallery'
+      }
+    ]
+  },
+  {
+    title: 'Other Pages',
+    navs: [
+      {
+        title: 'Committees',
+        text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
+        image: 'schedule-1',
+        url: '/committee'
+      },
+      {
+        title: 'Keynote Speaker',
+        text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
+        image: 'schedule-2',
+        url: '/keynote-speakers'
+      },
+      {
+        title: 'Projects',
+        text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
+        image: 'schedule-2',
+        url: '/gallery'
+      }
+    ]
+  },
+  {
+    title: 'Keynote Speakers',
+    navs: [
+      {
+        title: 'Speakers',
+        text: 'See your daily schedules ahead of the Conference',
+        image: 'keynote-1',
+        url: '/speakers'
+      },
+      {
+        title: 'Research Talk',
+        text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
+        image: 'keynote-3',
+        url: '/research-talk'
+      }
+    ]
+  },
+  {
+    title: 'Submission of Papers',
+    navs: [
+      {
+        title: 'Call for Papers',
+        text: 'See your daily schedules ahead of the Conference',
+        image: 'submission',
+        url: '/call-for-papers'
+      }
+    ]
+  }
+];
+
 export const days = [
   {
     day: 'day one',

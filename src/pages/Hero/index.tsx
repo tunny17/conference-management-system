@@ -1,13 +1,47 @@
+import { useEffect, useState } from 'react';
+
 const Hero = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  const calculateTimeLeft = () => {
+    const targetDate = new Date('2024-12-31T23:59:59'); // Set your target date here
+    const now = new Date();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      return { days, hours, minutes, seconds };
+    }
+
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer); // Cleanup on component unmount
+  }, []);
+
   return (
-    <div className="h-[80vh] bg-hero bg-cover bg-center pt-20 text-white flex flex-col justify-start items-center">
+    <div className="h-[80vh] bg-hero bg-cover bg-center pt-20 text-white flex flex-col justify-start items-center text-center md:text-left">
       <h3>2025 Conference on Information Communications Technology and Society, ICTAS</h3>
       <h3 className="my-5">Theme:</h3>
-      <h1 className="text-5xl w-[80%] text-center">
+      <h1 className="text-2xl md:text-5xl w-[80%] text-center">
         2025 Conference on Information Communications Technology and Society, ICTAS
       </h1>
 
-      <div className="flex justify-between items-center w-[45%] my-7 text-sm">
+      <div className="flex flex-col md:flex-row gap-y-3 justify-between items-start md:items-center md:w-[45%] my-7 text-sm">
         <span className="flex items-center gap-2">
           <svg
             width="21"
@@ -43,7 +77,7 @@ const Hero = () => {
         </span>
       </div>
 
-      <div className="flex gap-5 items-center w-[30%]">
+      <div className="flex gap-5 items-center w-full px-5 md:px-0 md:w-[30%]">
         <button
           type="button"
           className="w-2/4 bg-primary-light text-sm p-4 text-white rounded-md hover:scale-95 duration-300 transition-all"
@@ -58,24 +92,24 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className="mt-20 flex justify-between items-center w-[60%] text-4xl bg-white bg-opacity-15 py-5 px-14 rounded-lg">
+      <div className="mt-20 flex justify-between items-center w-[90%] mx-auto px-5 md:w-[60%] text-4xl bg-white bg-opacity-15 py-5 md:px-14 rounded-lg">
         <div>
-          <h1>45</h1>
+          <h1 className="mb-2">{timeLeft.days}</h1>
           <h1 className="text-base helvetica">Days</h1>
         </div>
 
         <div>
-          <h1>45</h1>
+          <h1 className="mb-2">{timeLeft.hours}</h1>
           <h1 className="text-base helvetica">Hours</h1>
         </div>
 
         <div>
-          <h1>45</h1>
+          <h1 className="mb-2">{timeLeft.minutes}</h1>
           <h1 className="text-base helvetica">Minutes</h1>
         </div>
 
         <div>
-          <h1>45</h1>
+          <h1 className="mb-2">{timeLeft.seconds}</h1>
           <h1 className="text-base helvetica">Seconds</h1>
         </div>
       </div>

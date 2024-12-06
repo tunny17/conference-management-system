@@ -52,16 +52,16 @@ const Contact = () => {
         </div>
       </div>
 
-      <section className="bg px-[10%] mb-10 py-10">
-        <h1 className="text-4xl font-extrabold">Need More information? </h1>
-        <p className="w-[45%] text-sm mt-3">
+      <section className="bg px-[10%] mb-10 py-5 md:py-10">
+        <h1 className="text-2xl md:text-4xl font-extrabold">Need More information? </h1>
+        <p className="w-full md:w-[45%] text-sm mt-3">
           Come and visit us in the iconic tourist city of Durban, where the weather is always
           summer! Beautiful beaches, close to game parks and cultural sites. Attendees are
           responsible for their own reservations for accommodation.
         </p>
 
-        <div className="mt-10 flex justify-between items-center">
-          <div className="flex items-start gap-8">
+        <div className="mt-10 flex flex-col md:flex-row gap-y-10 justify-between items-start md:items-center">
+          <div className="flex flex-col md:flex-row gap-y-7 items-start gap-8">
             <div>
               <img src="/email.svg" alt="" className="w-9" />
 
@@ -78,7 +78,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="w-[40%] shadow-md rounded-md p-7">
+          <div className="w-full md:w-[40%] shadow-md rounded-md p-7">
             <div>
               <p className="text-sm text-primary-light font-medium mb-1">Email</p>
               <input
@@ -113,8 +113,8 @@ const Contact = () => {
           </div>
         </div>
 
-        <section className="flex items-start mt-10 h-[55vh]">
-          <div className="bg-[#FFF0F0] p-10 flex flex-col justify-center items-start w-[30%] h-full">
+        <section className="flex flex-col md:flex-row items-start mt-10 md:h-[55vh]">
+          <div className="bg-[#FFF0F0] p-10 flex flex-col justify-center items-start w-full md:w-[30%] h-full">
             <img src="/venue.svg" alt="" className="w-9" />
 
             <h1 className="text mt-3">Venue </h1>
@@ -127,16 +127,16 @@ const Contact = () => {
           <img src="/map.png" className="h-full" alt="" />
         </section>
 
-        <section className="mt-10 px-10">
-          <h2 className="text-4xl font-extrabold">Frequently Asked Questions</h2>
-          <p className="w-[70%] mt-3">
+        <section className="mt-10 md:px-10">
+          <h2 className="text-2xl md:text-4xl font-extrabold">Frequently Asked Questions</h2>
+          <p className="w-full md:w-[70%] mt-3">
             Flex is the only saas business platform that lets you run your business on one platform,
             seamlessly across all digital channels.
           </p>
 
-          <div className="flex flex-wrap items-center justify-between mt-14 gap-y-3">
+          <div className="flex flex-col md:flex-row gap-y-7 flex-wrap items-center justify-between mt-14 md:gap-y-3">
             {faq.map((data, i) => (
-              <div key={i} className="w-[30%]">
+              <div key={i} className="w-full md:w-[30%]">
                 <img src="/faq.svg" alt="" className="w-10" />
                 <p className="text-[#2A3342] text-sm my-3 font-bold w-[70%]">{data.question}</p>
                 <p className="text-[#2A3342] leading-5 text-xs helvetica-light">{data.answer}</p>

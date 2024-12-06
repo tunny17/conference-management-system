@@ -1,85 +1,11 @@
-const ResourceNavigation = () => {
-  const Resources = [
-    {
-      title: 'Conference Pages',
-      navs: [
-        {
-          title: 'Schedule',
-          text: 'See your daily schedules ahead of the Conference',
-          image: 'schedule-1',
-          url: '/schedule'
-        },
-        {
-          title: 'Workshop',
-          text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint.',
-          image: 'schedule-2',
-          url: '/workshop'
-        },
-        {
-          title: 'Gallery',
-          text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'schedule-3',
-          url: '/gallery'
-        }
-      ]
-    },
-    {
-      title: 'Other Pages',
-      navs: [
-        {
-          title: 'Committees',
-          text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'schedule-1',
-          url: '/committee'
-        },
-        {
-          title: 'Keynote Speaker',
-          text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'schedule-2',
-          url: '/keynote-speaker'
-        },
-        {
-          title: 'Projects',
-          text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'schedule-2'
-        }
-      ]
-    },
-    {
-      title: 'Keynote Speakers',
-      navs: [
-        {
-          title: 'Speakers',
-          text: 'See your daily schedules ahead of the Conference',
-          image: 'keynote-1',
-          url: '/speakers'
-        },
-        {
-          title: 'Research Talk',
-          text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'keynote-3',
-          url: '/research-talk'
-        }
-      ]
-    },
-    {
-      title: 'Submission of Papers',
-      navs: [
-        {
-          title: 'Call for Papers',
-          text: 'See your daily schedules ahead of the Conference',
-          image: 'submission',
-          url: 'call-for-papers'
-        }
-      ]
-    }
-  ];
+import { Resources } from '../../../data';
 
+const ResourceNavigation = () => {
   return (
-    <div className="fixed z-[1000] top-28 left-0 w-full inset-0 bg-black bg-opacity-50">
-      <div className="w-[90vw] mx-auto rounded-lg bg-white flex justify-between p-5">
+    <div className="fixed z-[1000] top-0 md:top-28 left-0 w-full inset-0 bg-black bg-opacity-50 py-10 md:py-0">
+      <div className="w-[90vw] mx-auto rounded-lg bg-white flex flex-col gap-5 justify-between p-5 overflow-hidden overflow-y-auto md:flex-row h-[90vh] md:h-auto">
         {Resources.map((data, i) => (
-          <div key={i} className="w-[22%]">
+          <div key={i} className="w-full md:w-[22%]">
             <p className="text-xs text-primary-light mb-3">{data.title}</p>
 
             <ul className="flex flex-col gap-5">

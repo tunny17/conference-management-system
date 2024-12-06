@@ -15,13 +15,13 @@ const Home = () => {
       <Hero />
 
       {/* --- about section */}
-      <section className="h-[70vh] bg-section bg-cover bg-center flex justify-center items-center">
-        <div className="flex justify-between items-center w-[90%] mx-auto">
-          <img src="/ictas.png" alt="" className="w-[40%]" />
+      <section className="md:h-[70vh] py-8 md:py-0 bg-section bg-cover bg-center flex justify-center items-center">
+        <div className="flex flex-col gap-y-9 md:flex-row justify-between items-center w-[90%] mx-auto">
+          <img src="/ictas.png" alt="" className="w-full md:w-[40%]" />
 
-          <div className="w-[50%]">
+          <div className="w-full md:w-[50%]">
             <h1 className="text-3xl font-medium text-secondary-light">About ICTAS</h1>
-            <p className="helvetica-light mt-5">
+            <p className="helvetica-light mt-3 md:mt-5">
               Continuing from the outstanding success of IEEE AIIoT 2023, we are very proud to
               present IEEE World AI IoT Congress 2024 which will provide an opportunity for
               researchers, educators and students to discuss and exchange ideas on issues, trends,
@@ -41,17 +41,17 @@ const Home = () => {
         <div>
           <h1 className="text-3xl font-bold text-secondary-light">Call for Papers</h1>
         </div>
-        <p className="helvetica-light text-sm w-[70%] mt-5">
+        <p className="helvetica-light text-sm w-full md:w-[70%] mt-5">
           ALL papers presented at the ICTAS conferences have been published in IEEE Xplore,
           confirming that the ICTAS conferences are stable and attract DHET subsidy. Use the links
           above to view previous conferences
         </p>
 
-        <div className="flex justify-between items-center mt-5">
+        <div className="flex flex-col gap-y-5 md:flex-row justify-between items-center mt-5">
           {slider.map((item, index) => (
             <div
               key={index}
-              className="bg-blue-50 px-5 py-7 w-[30%] rounded-lg hover:scale-105 hover:bg-[#FFF0F0] duration-300 transition-all"
+              className="bg-blue-50 px-5 py-7 w-full md:w-[30%] rounded-lg hover:scale-105 hover:bg-[#FFF0F0] duration-300 transition-all"
             >
               <h1 className="text-lg font-medium h-16">{item.title}</h1>
 
@@ -82,7 +82,7 @@ const Home = () => {
           Schedules planned out for the Event. The detailed list of event for the conference 2024
         </p>
 
-        <div className="w-[80%] mx-auto bg-blue-50/45 shadow-md rounded-md my-16 p-2 flex gap-5 justify-center items-center">
+        <div className="w-full md:w-[80%] mx-auto bg-blue-50/45 shadow-md rounded-md my-16 p-2 flex gap-5 justify-center items-center">
           {days.map((data, i) => (
             <button
               key={i}
@@ -92,7 +92,7 @@ const Home = () => {
                 activeDate === data.day
                   ? 'bg-primary-light text-white'
                   : 'text-gray-400 bg-white/45'
-              } hover:scale-95 duration-300 transition-all text-xs pl-6 w-[13%] rounded-md py-2 flex flex-col items-start`}
+              } hover:scale-95 duration-300 transition-all text-xs pl-3 md:pl-6 w-full md:w-[13%] rounded-md py-2 flex flex-col items-start`}
             >
               <span className="uppercase">{data.day}</span>
               <span>{data.date}</span>
@@ -100,7 +100,7 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="w-[48%] mx-auto border-l-4 border-dashed">
+        <div className="w-full md:w-[48%] mx-auto border-l-4 border-dashed">
           {dayOne.map((data, i) => (
             <div key={i} className="px-5 my-10 text-sm relative">
               <img src="/blue-dot.svg" alt="" className="absolute top-0 -left-4" />
@@ -137,25 +137,25 @@ const Home = () => {
           We are bringing the finest industry experts to speak
         </p>
 
-        <div className="flex items-center justify-between w-[70%] mx-auto mt-10">
-          <img src="/speakers/speaker-1.png" alt="" className="w-[27%]" />
-          <img src="/speakers/speaker-2.png" alt="" className="w-[27%]" />
-          <img src="/speakers/speaker-3.png" alt="" className="w-[27%]" />
+        <div className="flex flex-col md:flex-row gap-y-8 items-center justify-between w-[70%] mx-auto mt-10">
+          <img src="/speakers/speaker-1.png" alt="" className="w-full md:w-[27%]" />
+          <img src="/speakers/speaker-2.png" alt="" className="w-full md:w-[27%]" />
+          <img src="/speakers/speaker-3.png" alt="" className="w-full md:w-[27%]" />
         </div>
       </section>
 
       {/* --- past conferences */}
       <section className="text-left mt-20 py-10 mb-5 px-[6%] bg-[#FAFDFF]">
         <h1 className="text-3xl font-bold text-secondary-light">ICTAS Previous Conferences</h1>
-        <p className="mt-3 helvetica-regular w-[80%]">
+        <p className="mt-3 helvetica-regular w-full md:w-[80%]">
           ALL papers presented at the ICTAS conferences have been published in IEEE Xplore,
           confirming that the ICTAS conferences are stable and attract DHET subsidy. Use the links
           above to view previous conferences
         </p>
 
-        <div className="flex items-center justify-between mt-14">
+        <div className="flex flex-col md:flex-row gap-y-7 items-center justify-between mt-14">
           {previewConferences.slice(3, 6).map((data, i) => (
-            <div key={i} className="w-[30%] text-center">
+            <div key={i} className="w-full md:w-[30%] text-center">
               <img src={data.image} alt="" className="" />
               <h1 className=" text-primary-light mt-5">{data.text}</h1>
             </div>

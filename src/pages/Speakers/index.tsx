@@ -25,8 +25,8 @@ const Speakers = () => {
         </div>
       </div>
 
-      <section className="px-[6%] py-20 bg-cover bg-center bg-[#FAFDFF]">
-        <div className="text-center">Our Keynote Speaker</div>
+      <section className="px-[6%] my-10 md:py-20 bg-cover bg-center bg-[#FAFDFF]">
+        <div className="text-center text-xl md:text-base">Our Keynote Speaker</div>
         <div className="flex items-center text-xs mt-5 mx-auto w-fit">
           <span className="px-4 py-2 border text-primary-light helvetica-regular rounded-tl-md rounded-bl-md bg-[#FFF0F0]">
             Corporate Talk
@@ -36,9 +36,9 @@ const Speakers = () => {
           </span>
         </div>
 
-        <div className="flex flex-wrap justify-between gap-3 mx-auto mt-10">
+        <div className="flex flex-col md:flex-row gap-y-7 flex-wrap justify-between gap-3 mx-auto mt-10">
           {speakers.map((speaker, index) => (
-            <img key={index} src={speaker} className="w-[24%]" alt="" />
+            <img key={index} src={speaker} className="w-full md:w-[24%]" alt="" />
           ))}
         </div>
 

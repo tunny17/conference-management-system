@@ -8,17 +8,22 @@ export const AppContext = createContext<AppContextType>({} as AppContextType);
 interface AppContextType {
   showDropdown: boolean;
   setShowDropdown: React.Dispatch<React.SetStateAction<boolean>>;
+  showNav: boolean;
+  setShowNav: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // AppContextProvider component to wrap the application or specific parts of it
 export const AppContextProvider = ({ children }: any) => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
   return (
     <AppContext.Provider
       value={{
         showDropdown,
-        setShowDropdown
+        setShowDropdown,
+        showNav,
+        setShowNav
       }}
     >
       {children}

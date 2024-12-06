@@ -26,15 +26,15 @@ const PastConferences = () => {
 
       <section className="bg-schedule px-[6%] py-20 bg-cover bg-center bg-[#FAFDFF]">
         <h1 className="text-3xl font-bold text-secondary-light">ICTAS Previous Conferences</h1>
-        <p className="mt-3 helvetica-regular w-[80%]">
+        <p className="mt-3 helvetica-regular w-full md:w-[80%]">
           ALL papers presented at the ICTAS conferences have been published in IEEE Xplore,
           confirming that the ICTAS conferences are stable and attract DHET subsidy. Use the links
           above to view previous conferences
         </p>
 
-        <div className="flex flex-wrap gap-y-7 items-center justify-between mt-14">
+        <div className="flex flex-col md:flex-row flex-wrap gap-y-7 items-center justify-between mt-14">
           {previewConferences.map((data, i) => (
-            <div key={i} className="w-[32%] text-center">
+            <div key={i} className="w-full md:w-[32%] text-center">
               <img src={data.image} alt="" className="" />
               <h1 className=" text-primary-light mt-5">{data.text}</h1>
             </div>

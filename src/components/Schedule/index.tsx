@@ -33,7 +33,7 @@ const Schedule = () => {
           Schedules planned out for the Event. The detailed list of event for the conference 2024
         </p>
 
-        <div className="w-[80%] mx-auto bg-blue-50/45 shadow-md rounded-md my-16 p-2 flex gap-5 justify-center items-center">
+        <div className="md:w-[80%] mx-auto bg-blue-50/45 shadow-md rounded-md my-16 p-2 flex gap-5 justify-center items-center">
           {days.map((data, i) => (
             <button
               key={i}
@@ -43,7 +43,7 @@ const Schedule = () => {
                 activeDate === data.day
                   ? 'bg-primary-light text-white'
                   : 'text-gray-400 bg-white/45'
-              } hover:scale-95 duration-300 transition-all text-xs pl-6 w-[13%] rounded-md py-2 flex flex-col items-start`}
+              } hover:scale-95 duration-300 transition-all text-xs pl-2 md:pl-6 w-full md:w-[13%] rounded-md py-2 flex flex-col items-start`}
             >
               <span className="uppercase">{data.day}</span>
               <span>{data.date}</span>
@@ -51,7 +51,7 @@ const Schedule = () => {
           ))}
         </div>
 
-        <div className="w-[48%] mx-auto border-l-4 border-dashed">
+        <div className="w-full md:w-[48%] mx-auto border-l-4 border-dashed">
           {dayOne.map((data, i) => (
             <div key={i} className="px-5 my-10 text-sm relative">
               <img src="/blue-dot.svg" alt="" className="absolute top-0 -left-4" />

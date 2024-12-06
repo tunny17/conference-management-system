@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, useLocation } from 'react-router';
 import { AppContext } from '../../context/AppContext';
 
-const Navigation = () => {
+const MobileNavigation = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const { setShowDropdown, showDropdown, setShowNav } = useContext(AppContext);
@@ -31,17 +31,26 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="md:bg-hero h-auto bg-cover bg-top py-5">
-      <div className="flex justify-between items-center w-[95vw] px-5 md:px-10 mx-auto py-3 bg-white rounded-md">
-        <Link to={`/`}>
-          <img src="/logo.svg" alt="" className="w-24 md:w-auto" />
-        </Link>
+    <div className="h-auto bg-black z-[2000] fixed top-0 left-0 bg-opacity-50 inset-0 py-5">
+      <div className="flex flex-col items-start w-[95vw] px-5 md:px-10 mx-auto py-3 bg-white h-[70vh] rounded-md">
+        <div className="flex justify-between items-center w-full">
+          <Link to={`/`} onClick={() => setShowNav(false)}>
+            <img src="/logo.svg" alt="" className="w-24 md:w-auto" />
+          </Link>
 
-        <nav className="md:flex items-center gap-7 hidden">
+          <button type="button" onClick={() => setShowNav(false)} className="w-5 block md:hidden">
+            <img src="/close.svg" alt="" />
+          </button>
+        </div>
+
+        <nav className="flex flex-col mt-10 items-center gap-8 md:hidden">
           <button
             type="button"
-            onClick={() => setShowDropdown(!showDropdown)}
-            className={`text-sm flex items-center gap-4 ${
+            onClick={() => {
+              setShowDropdown(!showDropdown);
+              setShowNav(false);
+            }}
+            className={`text-sm flex -ml-5 items-center justify-start gap-4 ${
               showDropdown ? 'font-bold text-primary-light' : ''
             }`}
           >
@@ -56,9 +65,10 @@ const Navigation = () => {
             </span>
           </button>
 
-          <ul className="flex items-center gap-7">
+          <ul className="flex flex-col items-start gap-8">
             {navs.map((nav) => (
               <Link
+                onClick={() => setShowNav(false)}
                 to={`${nav.path}`}
                 className={`text-sm flex items-center gap-4 ${
                   currentPath === nav.path ? 'font-bold text-primary-light' : ''
@@ -72,25 +82,14 @@ const Navigation = () => {
 
         <button
           type="button"
-          className="hidden md:block bg-primary-light text-sm p-4 text-white rounded-md hover:scale-95 duration-300 transition-all"
+          onClick={() => setShowNav(false)}
+          className="md:hidden mt-5 block bg-primary-light text-sm p-3 w-full text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Submission of Papers
-        </button>
-
-        <button type="button" onClick={() => setShowNav(true)} className="w-5 block md:hidden">
-          <svg viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M1.29855 11.5806H19.2986M1.29855 6.58057H19.2986M1.29855 1.58057H19.2986"
-              stroke="#474747"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
         </button>
       </div>
     </div>
   );
 };
 
-export default Navigation;
+export default MobileNavigation;

@@ -24,9 +24,9 @@ const Workshop = () => {
       </div>
 
       <section className="px-[10%] mb-28 bg-schedule bg-cover bg-center bg-[#FAFDFF]">
-        <img src="/workshop-hero.jpg" alt="" className="mb-20 mx-auto w-[30%]" />
+        <img src="/workshop-hero.jpg" alt="" className="mb-20 mx-auto w-full md:w-[30%]" />
 
-        <h1 className="text-4xl mb-7">
+        <h1 className="text-xl md:text-4xl mb-3 md:mb-7">
           The AIIoT 2024 IoT Workshop will be presented by Dr. Phillip Bradford (University of
           Connecticut, Stamford, USA)
         </h1>
@@ -75,14 +75,14 @@ const Workshop = () => {
           </p>
         </div>
 
-        <div className="flex justify-between mt-8">
-          <a href="" className="w-[30%]">
+        <div className="flex flex-col md:flex-row gap-y-7 justify-between mt-8">
+          <a href="" className="w-full md:w-[30%]">
             <img src="/public/pay-1.png" alt="" />
           </a>
-          <a href="" className="w-[30%]">
+          <a href="" className="w-full md:w-[30%]">
             <img src="/public/pay-2.png" alt="" />
           </a>
-          <a href="" className="w-[30%]">
+          <a href="" className="w-full md:w-[30%]">
             <img src="/public/pay-3.png" alt="" />
           </a>
         </div>

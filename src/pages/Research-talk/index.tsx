@@ -25,7 +25,7 @@ const ResearchTalk = () => {
       </div>
 
       <section className="bg px-[10%] mb-10 py-10">
-        <img src="/public/speakers/speaker-1.png" alt="" className="mx-auto w-[20%]" />
+        <img src="/public/speakers/speaker-1.png" alt="" className="mx-auto w-full md:w-[20%]" />
 
         <div className="flex items-start gap-2 mt-8">
           <img src="/avatar.png" alt="" className="w-10" />

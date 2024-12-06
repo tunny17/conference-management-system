@@ -2,9 +2,9 @@ const Footer = ({ showJoinBanner = true }) => {
   return (
     <section>
       {showJoinBanner && (
-        <section className="bg-footer bg-cover bg-center bg-[#FAFDFF] px-[6%] w-[88%] h-[40vh] mx-auto mb-10 py-10 rounded-md flex justify-center items-center">
+        <section className="bg-footer bg-cover bg-center bg-[#FAFDFF] px-[6%] w-[95%] md:w-[88%] h-[40vh] mx-auto mb-10 py-10 rounded-md flex flex-col md:flex-row gap-y-7 justify-center items-center">
           <div>
-            <h3 className="text-4xl font-bold text-[#474747] w-[70%]">
+            <h3 className="text-xl md:text-4xl font-bold text-[#474747] w-[70%]">
               Ready to be part of this great establishment?
             </h3>
             <p className="helvetica-regular text-xs mt-5">
@@ -28,8 +28,8 @@ const Footer = ({ showJoinBanner = true }) => {
         </section>
       )}
 
-      <section className="bg-primary-light text-white px-[6%] py-10 flex items-start justify-between">
-        <div className="w-[25%]">
+      <section className="bg-primary-light text-white px-[6%] py-10 flex flex-col md:flex-row gap-y-7 items-start justify-between">
+        <div className="w-full md:w-[25%]">
           <img src="/logo.svg" alt="" />
           <p className="text-xs helvetica-regular my-5">
             Continuing from the outstanding success of IEEE AIIoT 2023, we are very proud to present
@@ -129,7 +129,7 @@ const Footer = ({ showJoinBanner = true }) => {
             </a>
           </div>
         </div>
-        <div className="w-[8%]">
+        <div className="w-full md:w-[8%]">
           <h3>ICTAS Event</h3>
 
           <ul className="mt-5 text-sm helvetica-regular leading-6">
@@ -139,7 +139,7 @@ const Footer = ({ showJoinBanner = true }) => {
           </ul>
         </div>
 
-        <div className="w-[28%]">
+        <div className="w-full md:w-[28%]">
           <h3>Stay in the loop</h3>
           <p className="text-xs mt-5">
             Join our mailing list to stay in the loop with our newest for Event and concert

@@ -31,8 +31,8 @@ const Donate = () => {
         </div>
       </div>
 
-      <section className="px-[10%] mb-10 py-10 flex items-center justify-between">
-        <div className="w-[45%]">
+      <section className="px-[10%] mb-10 py-10 flex flex-col md:flex-row gap-y-12 items-center justify-between">
+        <div className="w-full md:w-[45%]">
           <h1 className="text-3xl mb-4">Donations</h1>
           <p className="helvetica-regular leading-6 text-sm">
             Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
@@ -63,7 +63,7 @@ const Donate = () => {
 
           <input
             type="text"
-            className="px-3 py-1 rounded-md placeholder:text-black border border-black my-5 text-xs outline-none w-full"
+            className="px-3 py-2 rounded-md placeholder:text-black border border-black my-5 text-xs outline-none w-full"
             placeholder="Other Amount (usd)"
           />
 

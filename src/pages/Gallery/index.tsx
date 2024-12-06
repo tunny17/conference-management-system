@@ -37,10 +37,10 @@ const Gallery = () => {
       </div>
 
       <section className="bg-schedule px-[6%] py-20 bg-cover bg-center bg-[#FAFDFF]">
-        <h1 className="text-2xl font-bold">Gallery</h1>
+        <h1 className="text-2xl text-center md:text-left font-bold">Gallery</h1>
 
-        <div className="flex justify-between mt-5">
-          <div className="flex flex-col shadow-md p-2 w-[20%] h-fit">
+        <div className="flex flex-col md:flex-row gap-y-7 justify-between mt-5">
+          <div className="flex flex-col shadow-md p-2 w-full md:w-[20%] h-fit">
             {gallery.map((item, i) => (
               <button
                 key={i}
@@ -67,7 +67,7 @@ const Gallery = () => {
             ))}
           </div>
 
-          <div className="w-[75%] flex flex-wrap justify-between gap-y-3">
+          <div className="w-full md:w-[75%] flex flex-wrap justify-between gap-y-3">
             {activeGallery.pictures.map((item, i) => (
               <img key={i} src={item} alt="" className="w-[32%]" />
             ))}
