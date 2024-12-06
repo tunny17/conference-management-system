@@ -7,10 +7,9 @@ const Hero = () => {
     minutes: 0,
     seconds: 0
   });
-
   const calculateTimeLeft = () => {
-    const targetDate = new Date('2024-12-31T23:59:59'); // Set your target date here
-    const now = new Date();
+    const targetDate = new Date('2024-12-31T23:59:59').getTime(); // Set your target date here
+    const now = new Date().getTime();
     const difference = targetDate - now;
 
     if (difference > 0) {
