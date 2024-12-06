@@ -19,10 +19,10 @@ const CallForPapers = () => {
               fill="#4B6BA4"
             />
           </svg>
-          / Call for papers
+          / Call for paper
         </a>
         <div>
-          <h1 className="text-3xl text-primary-light font-bold text-center">Call for papers</h1>
+          <h1 className="text-3xl text-primary-light font-bold text-center">Call for paper</h1>
         </div>
       </div>
 
@@ -30,7 +30,7 @@ const CallForPapers = () => {
         <div className="flex flex-col-reverse md:flex-row gap-y-10 justify-between items-start">
           <div className="w-full md:w-[60%]">
             <h1 className="text-2xl font-bold mb-2">
-              Details can also be found in the call for Papers PDF file:
+              Details can also be found in the call for Paper PDF file:
             </h1>
             <h3 className="text-base font-extrabold mb-3">
               PAPER SUBMISSION INSTRUCTIONS FOR REVIEW MANUSCRIPT

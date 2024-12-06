@@ -41,7 +41,7 @@ const Navigation = () => {
           <button
             type="button"
             onClick={() => setShowDropdown(!showDropdown)}
-            className={`text-sm flex items-center gap-4 ${
+            className={`text-base flex items-center gap-4 ${
               showDropdown ? 'font-bold text-primary-light' : ''
             }`}
           >
@@ -61,7 +61,7 @@ const Navigation = () => {
               <Link
                 key={i}
                 to={`${nav.path}`}
-                className={`text-sm flex items-center gap-4 ${
+                className={`text-base flex items-center gap-4 ${
                   currentPath === nav.path ? 'font-bold text-primary-light' : ''
                 }`}
               >
@@ -71,12 +71,12 @@ const Navigation = () => {
           </ul>
         </nav>
 
-        <button
-          type="button"
-          className="hidden md:block bg-primary-light text-sm p-4 text-white rounded-md hover:scale-95 duration-300 transition-all"
+        <a
+          href="/call-for-papers"
+          className="hidden md:block no-underline bg-primary-light text-base py-4 px-9 text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
-          Submission of Papers
-        </button>
+          Call for Paper
+        </a>
 
         <button type="button" onClick={() => setShowNav(true)} className="w-5 block md:hidden">
           <svg viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">

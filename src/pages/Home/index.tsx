@@ -6,9 +6,18 @@ import VideoSlider from '../../components/VideoSwiper';
 
 import { slider, days, dayOne, previewConferences, videoUrls } from '../../../data.ts';
 import Sponsors from '../../components/Sponsors/index.tsx';
+import Carousel from '../../components/Carousel/index.tsx';
 
 const Home = () => {
   const [activeDate, setActiveDate] = useState('day one');
+
+  const images = [
+    '/new-images/image-1.jpeg',
+    '/new-images/image-2.jpeg',
+    '/new-images/image-3.jpeg',
+    '/new-images/image-4.jpeg',
+    '/new-images/image-5.jpeg'
+  ];
 
   return (
     <div>
@@ -17,34 +26,37 @@ const Home = () => {
       {/* --- about section */}
       <section className="md:h-[70vh] py-8 md:py-0 bg-section bg-cover bg-center flex justify-center items-center">
         <div className="flex flex-col gap-y-9 md:flex-row justify-between items-center w-[90%] mx-auto">
-          <img src="/ictas.png" alt="" className="w-full md:w-[40%]" />
+          {/* <img src="/ictas.png" alt="" className="w-full md:w-[40%]" /> */}
+          <div className="w-full md:w-[40%]">
+            <Carousel images={images} interval={5000} />
+          </div>
 
           <div className="w-full md:w-[50%]">
             <h1 className="text-3xl font-medium text-secondary-light">About ICTAS</h1>
             <p className="helvetica-light mt-3 md:mt-5">
-              Continuing from the outstanding success of IEEE AIIoT 2023, we are very proud to
-              present IEEE World AI IoT Congress 2024 which will provide an opportunity for
-              researchers, educators and students to discuss and exchange ideas on issues, trends,
-              and developments in the related fields of AI and IoT. The conference aims to bring
-              together scholars from different disciplinary backgrounds to emphasize the
-              dissemination of ongoing research in the fields of AI and IoT. Research papers are
-              invited describing original work in the above-mentioned fields and related
-              technologies. The conference will include a peer-reviewed program of technical
-              sessions. This year we will be hosting the conference physically.
+              The annual ICTAS conference, established in 2017, serves as a platform for researchers
+              in academia and industry to share their latest contributions in Information and
+              Communication Technology (ICT) and foster networking. Since its inception, each paper
+              presented has been published on IEEE Xplore, with a growing h5-index, currently at 16.
+              The conference encourages the exchange of ideas through keynotes, panel discussions,
+              and industry exhibits that bridge academic and industry innovations. The 2025 IEEE
+              ICTAS conference will showcase advancements in ICT, Engineering, and Digital Finance.
+              Accepted papers which are physically presented at the conference will be submitted for
+              publication on IEEE Xplore®. IEEE has granted technical sponsorship for ICTAS 2025
+              (#64866).
             </p>
           </div>
         </div>
       </section>
 
-      {/* --- call for papers */}
+      {/* --- call for paper */}
       <section className="px-[6%] py-10 bg-[#FAFDFF]">
         <div>
-          <h1 className="text-3xl font-bold text-secondary-light">Call for Papers</h1>
+          <h1 className="text-3xl font-bold text-secondary-light">Call for Paper</h1>
         </div>
         <p className="helvetica-light text-sm w-full md:w-[70%] mt-5">
-          ALL papers presented at the ICTAS conferences have been published in IEEE Xplore,
-          confirming that the ICTAS conferences are stable and attract DHET subsidy. Use the links
-          above to view previous conferences
+          We invite submissions of previously unpublished work on the following topics and technical
+          areas of interest (but not limited to the following):
         </p>
 
         <div className="flex flex-col gap-y-5 md:flex-row justify-between items-center mt-5">
@@ -55,7 +67,7 @@ const Home = () => {
             >
               <h1 className="text-lg font-medium h-16">{item.title}</h1>
 
-              <ul className="list-disc pl-4">
+              <ul className="list-disc pl-4 mb-5">
                 {item.nav.map((item, index) => (
                   <li key={index} className="text-sm helvetica-light leading-7">
                     {item}
@@ -63,11 +75,61 @@ const Home = () => {
                 ))}
               </ul>
 
-              <button className="px-7 py-3 bg-primary-light text-white text-sm mt-5 rounded-md">
+              <a
+                href="https://edas.info/newPaper.php?c=32731"
+                className="px-10 no-underline py-3 bg-primary-light text-white text-sm rounded-md"
+              >
                 Submit Paper
-              </button>
+              </a>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <p className="helvetica-light leading-8">
+            <strong>PAPER SUBMISSION INSTRUCTIONS:</strong> Only original papers that have not been
+            published or submitted for publications elsewhere will be considered for IEEE ICTAS
+            2025. All submitted manuscript will be evaluated on their quality and relevance using
+            double-blind peer review, which hides the authors’ identity from the reviewers. Only
+            once your paper has been accepted, will you be required to add author details and
+            finalize your submission by incorporating reviewer comments to improve your paper.
+            Papers are reviewed on the basis that they do not contain plagiarised material and have
+            not been accepted at any other conference at the same time (double submission). All
+            papers will be checked using IEEE Crosscheck to ascertain the originality of its
+            contents. When preparing your proposal, please take the following procedure as a
+            minimum:
+          </p>
+
+          <ul className="my-2 list-disc pl-4">
+            <li className="helvetica-light leading-8">
+              Eliminate the authors’ names, addresses, emails and affiliations from the title page.
+            </li>
+            <li className="helvetica-light leading-8">
+              Papers should not exceed 6 pages in length (including references)
+            </li>
+            <li className="helvetica-light leading-8">
+              Receipts of identifying names and financial sources should not be there.{' '}
+            </li>
+            <li className="helvetica-light leading-8">
+              Papers must be in Pdf-format, selected papers only will also be required in Word.
+            </li>
+            <li className="helvetica-light leading-8">
+              Use Pdf-Express to ensure the correct format. Refer to Pdf-Express link.{' '}
+            </li>
+            <li className="helvetica-light leading-8">
+              All papers must be uploaded on EDAS submission page{' '}
+            </li>
+            <li className="helvetica-light leading-8">
+              It is required that the manuscript follows the standard IEEE camera-ready format (IEEE
+              standard format, double column, 10-point font).
+            </li>
+          </ul>
+
+          <p className="helvetica-light">
+            Refer to IEEE Conference template. Follow these links below to learn more about IEEE
+            Submission Guidelines: <br /> IEEE Policy on Plagiarism <br /> IEEE Policy on Double
+            Submission <br /> IEEE Paper Review Process
+          </p>
         </div>
       </section>
 

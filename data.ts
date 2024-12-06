@@ -110,7 +110,7 @@ export const Resources = [
     title: 'Submission of Papers',
     navs: [
       {
-        title: 'Call for Papers',
+        title: 'Call for Paper',
         text: 'See your daily schedules ahead of the Conference',
         image: 'submission',
         url: '/call-for-papers'
