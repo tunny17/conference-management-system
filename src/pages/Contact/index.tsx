@@ -31,9 +31,9 @@ const Contact = () => {
   ];
 
   return (
-    <section className="mt-10">
-      <div className="px-[3%] py-5 mb-10">
-        <a href="/">
+    <section className="md:mt-10">
+      <div className="px-[3%] py-5 md:mb-10">
+        <a href="/" className="flex flex-row text-sm gap-2 mb-10 text-primary-light">
           <svg
             width="17"
             height="17"
@@ -46,6 +46,7 @@ const Contact = () => {
               fill="#4B6BA4"
             />
           </svg>
+          / Conference Schedule
         </a>
         <div>
           <h1 className="text-3xl text-primary-light font-bold text-center">Conference Schedule</h1>
@@ -113,7 +114,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <section className="flex flex-col md:flex-row items-start mt-10 md:h-[55vh]">
+        <section className="flex flex-col md:flex-row items-start mt-10 md:h-[55vh] h-[50vh] overflow-hidden">
           <div className="bg-[#FFF0F0] p-10 flex flex-col justify-center items-start w-full md:w-[30%] h-full">
             <img src="/venue.svg" alt="" className="w-9" />
 

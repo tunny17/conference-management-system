@@ -6,9 +6,9 @@ const Schedule = () => {
   const [activeDate, setActiveDate] = useState('day one');
 
   return (
-    <section className="mt-10">
-      <div className="px-[3%] py-5 mb-10">
-        <a href="/">
+    <section className="md:mt-10">
+      <div className="px-[3%] py-5 md:mb-10">
+        <a href="/" className="flex flex-row text-sm gap-2 mb-10 text-primary-light">
           <svg
             width="17"
             height="17"
@@ -21,6 +21,7 @@ const Schedule = () => {
               fill="#4B6BA4"
             />
           </svg>
+          / Conference Schedule
         </a>
         <div>
           <h1 className="text-3xl text-primary-light font-bold text-center">Conference Schedule</h1>

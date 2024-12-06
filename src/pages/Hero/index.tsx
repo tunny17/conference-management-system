@@ -76,16 +76,16 @@ const Hero = () => {
         </span>
       </div>
 
-      <div className="flex gap-5 items-center w-full px-5 md:px-0 md:w-[30%]">
+      <div className="flex gap-5 items-center w-full justify-between md:justify-normal px-5 md:px-0 md:w-[30%]">
         <button
           type="button"
-          className="w-2/4 bg-primary-light text-sm p-4 text-white rounded-md hover:scale-95 duration-300 transition-all"
+          className="w-[48%] bg-primary-light text-sm p-3 md:p-4 text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Submission of Papers
         </button>
         <button
           type="button"
-          className="w-2/4 text-primary-light text-sm p-4 bg-white rounded-md hover:scale-95 duration-300 transition-all"
+          className="w-[48%] text-primary-light text-sm p-3 md:p-4 bg-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Register
         </button>

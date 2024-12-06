@@ -4,9 +4,9 @@ import Sponsors from '../../components/Sponsors';
 
 const Committee = () => {
   return (
-    <section className="mt-10">
-      <div className="px-[3%] py-5 mb-10">
-        <a href="/">
+    <section className="md:mt-10">
+      <div className="px-[3%] py-5 md:mb-10">
+        <a href="/" className="flex flex-row text-sm gap-2 mb-10 text-primary-light">
           <svg
             width="17"
             height="17"
@@ -19,6 +19,7 @@ const Committee = () => {
               fill="#4B6BA4"
             />
           </svg>
+          / Committee
         </a>
         <div>
           <h1 className="text-3xl text-primary-light font-bold text-center">Committee</h1>
