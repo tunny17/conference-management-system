@@ -1,30 +1,32 @@
-const Footer = () => {
+const Footer = ({ showJoinBanner = true }) => {
   return (
     <section>
-      <section className="bg-footer bg-cover bg-center bg-[#FAFDFF] px-[6%] w-[88%] h-[40vh] mx-auto mb-10 py-10 rounded-md flex justify-center items-center">
-        <div>
-          <h3 className="text-4xl font-bold text-[#474747] w-[70%]">
-            Ready to be part of this great establishment?
-          </h3>
-          <p className="helvetica-regular text-xs mt-5">
-            Build opportunities for future opportunities for products, startups.
-          </p>
-        </div>
-        <div className="flex gap-5">
-          <button
-            type="button"
-            className="px-7 py-2 bg-primary-light text-sm text-white rounded-md"
-          >
-            Join ICTAS Comunity
-          </button>
-          <button
-            type="button"
-            className="px-3 py-2 text-sm rounded-md border-[#474747] text-secondary-light border "
-          >
-            Donate
-          </button>
-        </div>
-      </section>
+      {showJoinBanner && (
+        <section className="bg-footer bg-cover bg-center bg-[#FAFDFF] px-[6%] w-[88%] h-[40vh] mx-auto mb-10 py-10 rounded-md flex justify-center items-center">
+          <div>
+            <h3 className="text-4xl font-bold text-[#474747] w-[70%]">
+              Ready to be part of this great establishment?
+            </h3>
+            <p className="helvetica-regular text-xs mt-5">
+              Build opportunities for future opportunities for products, startups.
+            </p>
+          </div>
+          <div className="flex gap-5">
+            <button
+              type="button"
+              className="px-7 py-2 bg-primary-light text-sm text-white rounded-md"
+            >
+              Join ICTAS Comunity
+            </button>
+            <button
+              type="button"
+              className="px-3 py-2 text-sm rounded-md border-[#474747] text-secondary-light border "
+            >
+              Donate
+            </button>
+          </div>
+        </section>
+      )}
 
       <section className="bg-primary-light text-white px-[6%] py-10 flex items-start justify-between">
         <div className="w-[25%]">

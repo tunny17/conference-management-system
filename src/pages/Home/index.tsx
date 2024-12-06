@@ -4,116 +4,17 @@ import Hero from '../Hero';
 import Footer from '../../components/Footer';
 import VideoSlider from '../../components/VideoSwiper';
 
+import { slider, days, dayOne, previewConferences, videoUrls } from '../../../data.ts';
+import Sponsors from '../../components/Sponsors/index.tsx';
+
 const Home = () => {
   const [activeDate, setActiveDate] = useState('day one');
-
-  const slider = [
-    {
-      title: 'Information technology/Information System Track',
-      nav: [
-        'Computer Networks and Engineering',
-        'Cybersecurity',
-        'Data Science and Big Data',
-        'Digital Transformation',
-        'Edge and Cloud Computing',
-        'ICT4D',
-        'Image Processing',
-        'Information Systems',
-        'Internet of Things (IoT)',
-        'Machine Learning and Artificial Intelligence',
-        'Semantic Web'
-      ]
-    },
-    {
-      title: 'Digital finance Track',
-      nav: [
-        'Cryptocurrency and Blockchain',
-        'Digital Banking',
-        'Financial Inclusion',
-        'Cybersecurity in Finance',
-        'Regulatory Technology (RegTech)',
-        'Mobile Payments',
-        'Web2 Partnerships and Web3 Users',
-        'Real-World Assets (RWAs)',
-        'Tokenization'
-      ]
-    },
-    {
-      title: 'Engineering Track',
-      nav: [
-        'Engineering Education',
-        'Renewable Energy Systems',
-        'Energy Sustainability',
-        'Smart Grids and Microgrids',
-        'Cybersecurity and Risk Analysis',
-        'Energy Storage'
-      ]
-    }
-  ];
-
-  const days = [
-    {
-      day: 'day one',
-      date: '1st Jan, 2022'
-    },
-    {
-      day: 'day two',
-      date: '2nd Jan, 2022'
-    },
-    {
-      day: 'day three',
-      date: '3rs Jan, 2022'
-    }
-  ];
-
-  const dayOne = [
-    {
-      time: '8:00-9:00',
-      text: 'Registration'
-    },
-    {
-      time: '8:00-9:00',
-      text: 'Registration',
-      content:
-        'A conference held in multiple international cities, DLD connects business, thought leaders, and influencers for cross-over discussion.',
-      location: 'Square Tower, Oven Center'
-    },
-    {
-      time: '8:00-9:00',
-      text: 'Welcome Address/Speed Networking',
-      location: 'Square Tower, Oven Center'
-    },
-    {
-      time: '8:00-9:00',
-      text: 'Keynot Address 1',
-      location: 'Square Tower, Oven Center'
-    }
-  ];
-
-  const previewConferences = [
-    {
-      text: 'ICTAS 2022',
-      image: '/preview/preview-1.png',
-      link: '/past-conferences/ictas-2022'
-    },
-    {
-      text: 'ICTAS 2023',
-      image: '/preview/preview-2.png',
-      link: '/past-conferences/ictas-2023'
-    },
-    {
-      text: 'ICTAS 2024',
-      image: '/preview/preview-3.png',
-      link: '/past-conferences/ictas-2024'
-    }
-  ];
-
-  const videoUrls = ['https://www.w3schools.com/html/mov_bbb.mp4'];
 
   return (
     <div>
       <Hero />
 
+      {/* --- about section */}
       <section className="h-[70vh] bg-section bg-cover bg-center flex justify-center items-center">
         <div className="flex justify-between items-center w-[90%] mx-auto">
           <img src="/ictas.png" alt="" className="w-[40%]" />
@@ -135,6 +36,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* --- call for papers */}
       <section className="px-[6%] py-10 bg-[#FAFDFF]">
         <div>
           <h1 className="text-3xl font-bold text-secondary-light">Call for Papers</h1>
@@ -173,9 +75,9 @@ const Home = () => {
         <img src="/page-breaker.svg" alt="" />
       </section>
 
-      {/* schedule section --- */}
+      {/* conference schedule --- */}
       <section className="bg-schedule h-[100vh] bg-cover bg-center bg-[#FAFDFF] px-[6%] mb-10 py-10">
-        <h1 className="text-3xl font-bold text-secondary-light">Conference Shcedule</h1>
+        <h1 className="text-3xl font-bold text-secondary-light">Conference Schedule</h1>
         <p className="mt-5 helvetia-light">
           Schedules planned out for the Event. The detailed list of event for the conference 2024
         </p>
@@ -228,6 +130,7 @@ const Home = () => {
         <img src="/page-breaker.svg" alt="" />
       </section>
 
+      {/* --- keynote speakers */}
       <section className="text-center my-5 py-10 bg-[#FAFDFF]">
         <h1 className="text-3xl font-bold text-secondary-light">Keynote Speakers</h1>
         <p className="mt-3 helvetica-regular">
@@ -241,6 +144,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* --- past conferences */}
       <section className="text-left mt-20 py-10 mb-5 px-[6%] bg-[#FAFDFF]">
         <h1 className="text-3xl font-bold text-secondary-light">ICTAS Previous Conferences</h1>
         <p className="mt-3 helvetica-regular w-[80%]">
@@ -250,7 +154,7 @@ const Home = () => {
         </p>
 
         <div className="flex items-center justify-between mt-14">
-          {previewConferences.map((data, i) => (
+          {previewConferences.slice(3, 6).map((data, i) => (
             <div key={i} className="w-[30%] text-center">
               <img src={data.image} alt="" className="" />
               <h1 className=" text-primary-light mt-5">{data.text}</h1>
@@ -268,29 +172,7 @@ const Home = () => {
         <VideoSlider videos={videoUrls} />
       </section>
 
-      <section className="bg-sponsor bg-cover bg-center bg-[#FAFDFF] px-[6%] mb-10 py-10 flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-bold text-secondary-light">Conference Sponsors</h1>
-        <p className="mt-3 helvetica-regular text-[#556987]">
-          Backbone for our responsible events become successful event
-        </p>
-        <div className="flex items-center text-sm mt-3">
-          <span className="px-4 py-2 border text-primary-light helvetica-regular rounded-tl-md rounded-bl-md bg-#F7F8F9]">
-            Golden Sponsors
-          </span>
-          <span className="px-4 py-2 border text-primary-light helvetica-regular bg-[#FFF0F0]">
-            Platinum Sponsor
-          </span>
-          <span className="px-4 py-2 border text-primary-light helvetica-regular rounded-tr-md rounded-br-md bg-[#F7F8F9]">
-            Silver Sponsors
-          </span>
-        </div>
-        <span className="text-[#BBC3CF] text-xs my-7">
-          Trusted by the top companies in this industry
-        </span>
-        <div className="">
-          <img src="/sponsors.png" alt="" className="w-[80%] mx-auto" />
-        </div>
-      </section>
+      <Sponsors />
 
       <Footer />
     </div>

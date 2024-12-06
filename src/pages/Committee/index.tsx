@@ -1,7 +1,8 @@
-import { previewConferences } from '../../../data';
 import Footer from '../../components/Footer';
+import { speakers } from '../../../data';
+import Sponsors from '../../components/Sponsors';
 
-const PastConferences = () => {
+const Committee = () => {
   return (
     <section className="mt-10">
       <div className="px-[3%] py-5 mb-10">
@@ -20,26 +21,28 @@ const PastConferences = () => {
           </svg>
         </a>
         <div>
-          <h1 className="text-3xl text-primary-light font-bold text-center">Past Conference</h1>
+          <h1 className="text-3xl text-primary-light font-bold text-center">Committee</h1>
         </div>
       </div>
 
-      <section className="bg-schedule px-[6%] py-20 bg-cover bg-center bg-[#FAFDFF]">
-        <h1 className="text-3xl font-bold text-secondary-light">ICTAS Previous Conferences</h1>
-        <p className="mt-3 helvetica-regular w-[80%]">
-          ALL papers presented at the ICTAS conferences have been published in IEEE Xplore,
-          confirming that the ICTAS conferences are stable and attract DHET subsidy. Use the links
-          above to view previous conferences
-        </p>
+      <section className="px-[6%] py-20 bg-cover bg-center bg-[#FAFDFF]">
+        <div className="text-center">We are bringing the finest industry experts to speak</div>
+        <div className="flex items-center text-xs mt-5 mx-auto w-fit">
+          <span className="px-4 py-2 border text-primary-light helvetica-regular rounded-tl-md rounded-bl-md bg-[#FFF0F0]">
+            Organising Committee
+          </span>
+          <span className="px-4 py-2 border text-primary-light helvetica-regular rounded-tr-md rounded-br-md bg-[#F7F8F9]">
+            Technical Committee
+          </span>
+        </div>
 
-        <div className="flex flex-wrap gap-y-7 items-center justify-between mt-14">
-          {previewConferences.map((data, i) => (
-            <div key={i} className="w-[32%] text-center">
-              <img src={data.image} alt="" className="" />
-              <h1 className=" text-primary-light mt-5">{data.text}</h1>
-            </div>
+        <div className="flex flex-wrap justify-between gap-3 mx-auto mt-10">
+          {speakers.map((speaker, index) => (
+            <img key={index} src={speaker} className="w-[24%]" alt="" />
           ))}
         </div>
+
+        <Sponsors />
       </section>
 
       <div className="mt-5">
@@ -49,4 +52,4 @@ const PastConferences = () => {
   );
 };
 
-export default PastConferences;
+export default Committee;

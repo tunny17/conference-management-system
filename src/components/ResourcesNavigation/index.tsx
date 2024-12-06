@@ -6,17 +6,20 @@ const ResourceNavigation = () => {
         {
           title: 'Schedule',
           text: 'See your daily schedules ahead of the Conference',
-          image: 'schedule-1'
+          image: 'schedule-1',
+          url: '/schedule'
         },
         {
           title: 'Workshop',
           text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint.',
-          image: 'schedule-2'
+          image: 'schedule-2',
+          url: '/workshop'
         },
         {
           title: 'Gallery',
           text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'schedule-3'
+          image: 'schedule-3',
+          url: '/gallery'
         }
       ]
     },
@@ -26,12 +29,14 @@ const ResourceNavigation = () => {
         {
           title: 'Committees',
           text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'schedule-1'
+          image: 'schedule-1',
+          url: '/committee'
         },
         {
           title: 'Keynote Speaker',
           text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'schedule-2'
+          image: 'schedule-2',
+          url: '/keynote-speaker'
         },
         {
           title: 'Projects',
@@ -46,12 +51,14 @@ const ResourceNavigation = () => {
         {
           title: 'Speakers',
           text: 'See your daily schedules ahead of the Conference',
-          image: 'keynote-1'
+          image: 'keynote-1',
+          url: '/speakers'
         },
         {
           title: 'Research Talk',
           text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-          image: 'keynote-3'
+          image: 'keynote-3',
+          url: '/research-talk'
         }
       ]
     },
@@ -61,7 +68,8 @@ const ResourceNavigation = () => {
         {
           title: 'Call for Papers',
           text: 'See your daily schedules ahead of the Conference',
-          image: 'submission'
+          image: 'submission',
+          url: 'call-for-papers'
         }
       ]
     }
@@ -76,7 +84,8 @@ const ResourceNavigation = () => {
 
             <ul className="flex flex-col gap-5">
               {data.navs.map((nav, i) => (
-                <li
+                <a
+                  href={nav.url}
                   key={i}
                   className="flex gap-2 items-start rounded-md p-2 hover:bg-[#F8F8F8] hover:text-primary-light cursor-pointer duration-300 transition-all"
                 >
@@ -86,7 +95,7 @@ const ResourceNavigation = () => {
                     <p className="text-sm m-0 font-bold">{nav.title}</p>
                     <p className="text-xs leading-4 mt-1">{nav.text}</p>
                   </div>
-                </li>
+                </a>
               ))}
             </ul>
           </div>
