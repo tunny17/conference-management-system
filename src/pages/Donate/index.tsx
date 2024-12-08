@@ -112,7 +112,7 @@ const Donate = () => {
       <Sponsors />
 
       <div className="mt-5">
-        <Footer showJoinBanner={false} />
+        <Footer />
       </div>
     </section>
   );
