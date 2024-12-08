@@ -130,19 +130,31 @@ const Home = () => {
           <p className="helvetica-light">
             Refer to IEEE Conference template. Follow these links below to learn more about IEEE
             Submission Guidelines: <br />
-            <a href="https://www.ieee.org/publications/rights/plagiarism/plagiarism.html">
+            <a
+              className="text-primary-light"
+              href="https://www.ieee.org/publications/rights/plagiarism/plagiarism.html"
+            >
               IEEE Policy on Plagiarism
             </a>
             <br />
-            <a href="https://www.ieee.org/publications/rights/multi-sub-guidelines-intro.html">
+            <a
+              className="text-primary-light"
+              href="https://www.ieee.org/publications/rights/multi-sub-guidelines-intro.html"
+            >
               IEEE Policy on Double Submission
             </a>
             <br />
-            <a href="https://events.ieee.org/planning-basics/technical-program-development-quality/peer-review-">
+            <a
+              className="text-primary-light"
+              href="https://events.ieee.org/planning-basics/technical-program-development-quality/peer-review-"
+            >
               IEEE Paper Review Process
             </a>
             <br />
-            <a href="https://www.ieee.org/conferences/publishing/templates.html">
+            <a
+              className="text-primary-light"
+              href="https://www.ieee.org/conferences/publishing/templates.html"
+            >
               IEEE Paper Review Process
             </a>
           </p>
