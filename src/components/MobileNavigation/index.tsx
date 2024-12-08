@@ -9,24 +9,46 @@ const MobileNavigation = () => {
 
   const navs = [
     {
+      title: 'About ICTAS',
+      isDropDown: false,
+      path: '/#about',
+      isAbout: true
+    },
+    {
       title: 'Past Conferences',
       isDropDown: false,
-      path: '/past-conferences'
+      path: '/past-conferences',
+      isAbout: false
     },
+    {
+      title: 'Committee',
+      isDropDown: false,
+      path: '/committee',
+      isAbout: false
+    },
+    // {
+    //   title: 'Program',
+    //   isDropDown: false,
+    //   path: '/schedule',
+    //   isAbout: false
+    // },
     {
       title: 'Donate',
       isDropDown: false,
-      path: '/donate'
+      path: '/donate',
+      isAbout: false
     },
     {
       title: 'Contact Us',
       isDropDown: false,
-      path: '/contact'
+      path: '/contact',
+      isAbout: false
     },
     {
       title: 'Register',
       isDropDown: false,
-      path: '/register'
+      path: '/register',
+      isAbout: false
     }
   ];
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Hero from '../Hero';
 import Footer from '../../components/Footer';
@@ -21,12 +21,38 @@ const Home = () => {
     '/new-images/image-5.jpeg'
   ];
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Handle hash on initial load
+    handleHashChange();
+
+    // Listen for hash change events
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
     <div>
       <Hero />
 
       {/* --- about section */}
-      <section className="md:h-[70vh] py-8 md:py-0 bg-section bg-cover bg-center flex justify-center items-center">
+      <section
+        id="about"
+        className="md:h-[70vh] py-8 md:py-0 bg-section bg-cover bg-center flex justify-center items-center"
+      >
         <div className="flex flex-col gap-y-9 md:flex-row justify-between items-center w-[90%] mx-auto">
           {/* <img src="/ictas.png" alt="" className="w-full md:w-[40%]" /> */}
           <div className="w-full md:w-[40%]">

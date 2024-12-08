@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext } from 'react';
 import { Link, useLocation } from 'react-router';
 import { AppContext } from '../../context/AppContext';
@@ -9,31 +10,57 @@ const Navigation = () => {
 
   const navs = [
     {
+      title: 'About ICTAS',
+      isDropDown: false,
+      path: '/#about',
+      isAbout: true
+    },
+    {
       title: 'Past Conferences',
       isDropDown: false,
-      path: '/past-conferences'
+      path: '/past-conferences',
+      isAbout: false
     },
     {
       title: 'Committee',
       isDropDown: false,
-      path: '/committee'
+      path: '/committee',
+      isAbout: false
     },
+    // {
+    //   title: 'Program',
+    //   isDropDown: false,
+    //   path: '/schedule',
+    //   isAbout: false
+    // },
     {
       title: 'Donate',
       isDropDown: false,
-      path: '/donate'
+      path: '/donate',
+      isAbout: false
     },
     {
       title: 'Contact Us',
       isDropDown: false,
-      path: '/contact'
+      path: '/contact',
+      isAbout: false
     },
     {
       title: 'Register',
       isDropDown: false,
-      path: '/register'
+      path: '/register',
+      isAbout: false
     }
   ];
+
+  const scrollToSection = (id: any) => {
+    const targetElement = document.querySelector(id);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Update the hash in the URL for consistency
+    window.history.pushState(null, '', id);
+  };
 
   return (
     <div className="md:bg-hero h-auto bg-cover bg-top py-5">
@@ -66,6 +93,11 @@ const Navigation = () => {
               <Link
                 key={i}
                 to={`${nav.path}`}
+                onClick={() => {
+                  if (nav.isAbout) {
+                    scrollToSection('#about');
+                  }
+                }}
                 className={`text-base flex items-center gap-4 ${
                   currentPath === nav.path ? 'font-bold text-primary-light' : ''
                 }`}

@@ -632,7 +632,9 @@ export const sections = [
       '/finance/finance-3.png',
       '/finance/finance-4.png',
       '/finance/finance-5.png',
-      '/finance/finance-6.png'
+      '/finance/finance-6.png',
+      '/finance/finance-7.png',
+      '/finance/finance-8.png'
     ]
   },
   {
