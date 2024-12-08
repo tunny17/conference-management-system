@@ -7,6 +7,8 @@ import VideoSlider from '../../components/VideoSwiper';
 import { slider, days, dayOne, previewConferences, videoUrls } from '../../../data.ts';
 import Sponsors from '../../components/Sponsors/index.tsx';
 import Carousel from '../../components/Carousel/index.tsx';
+import Committee from '../Committee/index.tsx';
+import Speakers from '../Speakers/index.tsx';
 
 const Home = () => {
   const [activeDate, setActiveDate] = useState('day one');
@@ -127,8 +129,22 @@ const Home = () => {
 
           <p className="helvetica-light">
             Refer to IEEE Conference template. Follow these links below to learn more about IEEE
-            Submission Guidelines: <br /> IEEE Policy on Plagiarism <br /> IEEE Policy on Double
-            Submission <br /> IEEE Paper Review Process
+            Submission Guidelines: <br />
+            <a href="https://www.ieee.org/publications/rights/plagiarism/plagiarism.html">
+              IEEE Policy on Plagiarism
+            </a>
+            <br />
+            <a href="https://www.ieee.org/publications/rights/multi-sub-guidelines-intro.html">
+              IEEE Policy on Double Submission
+            </a>
+            <br />
+            <a href="https://events.ieee.org/planning-basics/technical-program-development-quality/peer-review-">
+              IEEE Paper Review Process
+            </a>
+            <br />
+            <a href="https://www.ieee.org/conferences/publishing/templates.html">
+              IEEE Paper Review Process
+            </a>
           </p>
         </div>
       </section>
@@ -188,12 +204,18 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="">
+        <img src="/page-breaker.svg" alt="" />
+      </section>
+
+      <Committee isComponent={true} />
+
       <section className="py-10">
         <img src="/page-breaker.svg" alt="" />
       </section>
 
       {/* --- keynote speakers */}
-      <section className="text-center my-5 py-10 bg-[#FAFDFF]">
+      {/* <section className="text-center my-5 py-10 bg-[#FAFDFF]">
         <h1 className="text-3xl font-bold text-secondary-light">Keynote Speakers</h1>
         <p className="mt-3 helvetica-regular">
           We are bringing the finest industry experts to speak
@@ -204,10 +226,11 @@ const Home = () => {
           <img src="/speakers/speaker-2.png" alt="" className="w-full md:w-[27%]" />
           <img src="/speakers/speaker-3.png" alt="" className="w-full md:w-[27%]" />
         </div>
-      </section>
+      </section> */}
+      <Speakers isHome={true} />
 
       {/* --- past conferences */}
-      <section className="text-left mt-20 py-10 mb-5 px-[6%] bg-[#FAFDFF]">
+      <section className="text-left mt-20 py-10 px-[6%] bg-[#FAFDFF]">
         <h1 className="text-3xl font-bold text-secondary-light">ICTAS Previous Conferences</h1>
         <p className="mt-3 helvetica-regular w-full md:w-[80%]">
           ALL papers presented at the ICTAS conferences have been published in IEEE Xplore,

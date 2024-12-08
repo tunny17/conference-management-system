@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Carousel from '../../components/Carousel';
+import HeroCarousel from '../../components/HeroCarousel';
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -43,7 +43,7 @@ const Hero = () => {
 
   return (
     <div className="h-[90vh] relative">
-      <Carousel images={images} interval={1100} height="h-[90vh]" />
+      <HeroCarousel images={images} interval={1100} height="h-[90vh]" />
 
       <div className="absolute top-0 left-0 w-full h-full bg-black inset-0 bg-opacity-40 text-white py-20 flex flex-col justify-start items-center text-center md:text-left">
         <h3>2025 IEEE Conference on Information Communications Technology and Society (ICTAS)</h3>

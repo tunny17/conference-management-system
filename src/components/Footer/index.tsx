@@ -5,7 +5,7 @@ const Footer = ({ showJoinBanner = true }) => {
         <section className="bg-footer bg-cover bg-center bg-[#FAFDFF] px-[6%] w-[95%] md:w-[88%] h-[40vh] mx-auto mb-10 py-10 rounded-md flex flex-col md:flex-row gap-y-7 justify-center items-center">
           <div>
             <h3 className="text-xl md:text-4xl font-bold text-[#474747] w-[70%]">
-              Ready to be part of this great establishment?
+              To be a reviewer or contribute to IEEE ICTAS 2025, use this link
             </h3>
             <p className="helvetica-regular text-xs mt-5">
               Build opportunities for future opportunities for products, startups.
@@ -14,6 +14,12 @@ const Footer = ({ showJoinBanner = true }) => {
           <div className="flex gap-5">
             <button
               type="button"
+              onClick={() =>
+                window.open(
+                  'https://forms.office.com/pages/responsepage.aspx?id=0TAZS_QStUC0jL2GEXQp2Jy36bzDqrlDilYlUzWeQJhUQzNJMkcwMkNHTDgzTjEyMFJPNkJSTUJaWS4u&route=shorturl',
+                  '_blank'
+                )
+              }
               className="px-7 py-2 bg-primary-light text-sm text-white rounded-md"
             >
               Join ICTAS Comunity
@@ -27,6 +33,10 @@ const Footer = ({ showJoinBanner = true }) => {
           </div>
         </section>
       )}
+
+      <div>
+        <img src="/footer.png" alt="" />
+      </div>
 
       <section className="bg-primary-light text-white px-[6%] py-10 flex flex-col md:flex-row gap-y-7 items-start justify-between">
         <div className="w-full md:w-[25%]">

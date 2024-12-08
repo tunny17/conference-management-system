@@ -101,7 +101,7 @@ export const Resources = [
       {
         title: 'Research Talk',
         text: 'Demo Description - t non deserunt ullamco est sit aliqua amet sint. ',
-        image: 'keynote-3',
+        image: 'keynote-2',
         url: '/research-talk'
       }
     ]
@@ -563,5 +563,40 @@ export const attendeeRegistration = [
         ]
       }
     ]
+  }
+];
+
+export const speaker = [
+  {
+    id: 1,
+    src: '/speaker/speaker-1.png',
+    src2: '/speaker/speaker-1a.png',
+    bio: 'Matteo Busso is a data scientist with the Department of Information Engineering and Computer Science of the University of Trento, Italy. He received his B.Sc in Intercultural Communication in 2015 at University of Torino and M.Sc degree in Sociology and Social Research in 2018 at University of Trento. His major research interests include Computational Social Theory, Scientific Data Infrastructure (SDI), Privacy and Ethics. He is currently working on human-centric SDI, to enable interdisciplinarity among Sociology and Informatics.mb loss, i.e., movements of the bionic limbs can be evoked by the users’ mind. Results of experiments involving human amputee subjects will be described and discussed.',
+    name: 'Matteo Busso',
+    jon: 'DATA SCIENTIST, UNIVERSITY OF TRENTO'
+  },
+  {
+    id: 2,
+    src: '/speaker/speaker-2.png',
+    src2: '/speaker/speaker-2a.png',
+    bio: 'Prof. Mohamed El Moursi received his BSc and MSc degrees in Electrical Engineering from Mansoura University, Egypt, in 1997 and 2002 respectively. He received his PhD degree in Electrical and Computer Engineering (ECE) from the University of New Brunswick (UNB), New Brunswick, Canada, in 2005. He worked as a designer engineer for photovoltaic power systems (1997-1998) for an agent of Siemens (ASET Company). He joined McGill University as a postdoctoral fellow in the power electronics group. Then, he joined Vestas Wind Systems in 2006, where he worked in the technology R&D with the Wind Power Plant Group, Arhus, Denmark, until October 2008. He later worked at Abu Dhabi Transmission and Dispatch Company, TRANSCO, as a senior study and planning engineer until September 2011. Then, he joined Masdar Institute (currently Khalifa University) in September 2011 as an Assistant Professor and then as an Associate Professor from January 2014 to July 2018. He was a Visiting Professor at Massachusetts Institute of Technology, Cambridge, Massachusetts, USA in 2012. Prof Mohamed El Moursi is currently a Professor with the Electrical Engineering Department and the Director of Advanced Power and Energy Center (APEC) at Khalifa University. He is an IEEE Fellow (Class of 2024) for his contributions to “Renewable Energy Integration and Hybrid Power Grids”, and a Distinguished Lecturer of IEEE Power and Energy Society (PES). He is also the Theme Director of renewable energy Integration at Virtual Research Institute (VRI) for Sustainable Energy Production, Storage, and Utilization (funded by ASPIRE).',
+    name: 'Professor Mohamed El Moursi',
+    jon: 'APEC, KHALIFA UNIVERSITY'
+  },
+  {
+    id: 3,
+    src: '/speaker/speaker-3.png',
+    src2: '/speaker/speaker-3a.png',
+    bio: 'Prof. Fausto Giunchiglia is a Professor of Computer Science, University of Trento, ECCAI fellow, member of the Academia Europaea. Fausto studied or had positions at the Universities of Genoa, Stanford, Edinburgh. His research is on knowledge management with a focus on managing diversity. He holds around 10 Best Paper Awards, gave more than 50 invited talks in international events; chaired more than 10 international events, among them: WWW 2021, KSEM 2018, ODBASE 2008, IJCAI 2005, Context 2003, AOSE 2002, Coopis 2001, KR&R 2000, FLOC 1999. He sits as editor or on the editorial board member of around 10 journals, among them: Journal of Data Semantics, Journal of Autonomous Agents and Multi-agent Systems, Journal of applied non-Classical Logics, Journal of Software Tools for Technology Transfer, Journal of Artificial Intelligence Research. He was a member of the IJCAI Board of Trustees (01-11), President of IJCAI (05-07), President of KR, Inc. (02-04), Advisory Board member of KR, Inc., Steering Committee of the CONTEXT conference.lts of experiments involving human amputee subjects will be described and discussed.',
+    name: 'MProfessor Fausto Giunchiglia',
+    jon: 'COMPUTER SCIENCE, UNIVERSITY OF TRENTO'
+  },
+  {
+    id: 4,
+    src: '/speaker/speaker-4.png',
+    src2: '/speaker/speaker-4a.png',
+    bio: 'Nicolaas van Wyk is the current Chief Executive Officer, Chartered Institute for Business Accountants (CIBA). As CEO of CIBA, Nicolaas van Wyk champions practical results and meaningful community engagement in the financial and accounting sector. He combines deep industry insight with a commitment to real-world solutions, propelling CIBA to a position of increased influence in the accounting profession. Nicolaas is recognized for his ability to unify diverse groups to address industry challenges, leading initiatives that enhance CIBA’s visibility and its practical impact on the profession. His strategic leadership has been instrumental in enhancing member services, spearheading international summits, and developing platforms that actively engage the community. Nicolaas authored the academic textbook Principles and Practices of Independent Review Engagements and has written influential articles exploring a range of topics from historical analyses of the accountancy',
+    name: 'Nicolaas Van Wyk',
+    jon: 'CEO, CHARTERED INSTITUTE FOR BUSINESS ACCOUNTANTS'
   }
 ];

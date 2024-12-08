@@ -11,6 +11,7 @@ import Speakers from '../../pages/Speakers';
 import Committee from '../../pages/Committee';
 import CallForPapers from '../../pages/Call-for-papers';
 import ResearchTalk from '../../pages/Research-talk';
+import Speaker from '../../pages/Speakers/[id]';
 
 const Rout = () => {
   return (
@@ -23,10 +24,11 @@ const Rout = () => {
       <Route path="/schedule" element={<Schedule />} />
       <Route path="/workshop" element={<Workshop />} />
       <Route path="/gallery" element={<Gallery />} />
-      <Route path="/keynote-speakers" element={<Speakers />} />
+      <Route path="/speakers" element={<Speakers />} />
       <Route path="/committee" element={<Committee />} />
       <Route path="/call-for-papers" element={<CallForPapers />} />
       <Route path="/research-talk" element={<ResearchTalk />} />
+      <Route path="/speakers/:id" element={<Speaker />} />
     </Routes>
   );
 };

@@ -45,7 +45,7 @@ const Navigation = () => {
               showDropdown ? 'font-bold text-primary-light' : ''
             }`}
           >
-            Resources
+            ICTAS 2025
             <span className="w-3">
               <svg viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
