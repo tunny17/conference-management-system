@@ -5,7 +5,7 @@ import Sponsors from '../../../components/Sponsors';
 
 const Speaker = () => {
   const { id } = useParams();
-  const speakerDetails = speaker.find((s) => s.id === parseInt(id));
+  const speakerDetails = speaker.find((s) => s.id === parseInt(id ?? ''));
 
   return (
     <section className="md:mt-10">
