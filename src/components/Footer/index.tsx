@@ -1,4 +1,4 @@
-const Footer = ({ showJoinBanner = true }) => {
+const Footer = () => {
   return (
     <section>
       {/* {showJoinBanner && (
