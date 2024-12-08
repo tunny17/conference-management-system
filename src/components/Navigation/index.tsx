@@ -14,6 +14,11 @@ const Navigation = () => {
       path: '/past-conferences'
     },
     {
+      title: 'Committee',
+      isDropDown: false,
+      path: '/committee'
+    },
+    {
       title: 'Donate',
       isDropDown: false,
       path: '/donate'

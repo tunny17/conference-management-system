@@ -46,10 +46,10 @@ const Contact = () => {
               fill="#4B6BA4"
             />
           </svg>
-          / Conference Schedule
+          / Contact Us
         </a>
         <div>
-          <h1 className="text-3xl text-primary-light font-bold text-center">Conference Schedule</h1>
+          <h1 className="text-3xl text-primary-light font-bold text-center">Contact Us</h1>
         </div>
       </div>
 
