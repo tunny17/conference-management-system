@@ -1,7 +1,7 @@
 const Footer = ({ showJoinBanner = true }) => {
   return (
     <section>
-      {showJoinBanner && (
+      {/* {showJoinBanner && (
         <section className="bg-footer bg-cover bg-center bg-[#FAFDFF] px-[6%] w-[95%] md:w-[88%] h-[40vh] mx-auto mb-10 py-10 rounded-md flex flex-col md:flex-row gap-y-7 justify-center items-center">
           <div>
             <h3 className="text-xl md:text-4xl font-bold text-[#474747] w-[70%]">
@@ -32,13 +32,13 @@ const Footer = ({ showJoinBanner = true }) => {
             </button>
           </div>
         </section>
-      )}
+      )} */}
 
       <div>
         <img src="/footer.png" alt="" />
       </div>
 
-      <section className="bg-primary-light text-white px-[6%] py-10 flex flex-col md:flex-row gap-y-7 items-start justify-between">
+      {/* <section className="bg-primary-light text-white px-[6%] py-10 flex flex-col md:flex-row gap-y-7 items-start justify-between">
         <div className="w-full md:w-[25%]">
           <img src="/logo.svg" alt="" />
           <p className="text-xs helvetica-regular my-5">
@@ -166,7 +166,7 @@ const Footer = ({ showJoinBanner = true }) => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </section>
   );
 };

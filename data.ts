@@ -610,7 +610,9 @@ export const sections = [
       '/executive/executive-3.png',
       '/executive/executive-4.png',
       '/executive/executive-5.png',
-      '/executive/executive-6.png'
+      '/executive/executive-6.png',
+      '/finance/finance-7.png',
+      '/finance/finance-8.png'
     ]
   },
   {

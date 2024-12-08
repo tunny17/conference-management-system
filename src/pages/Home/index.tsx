@@ -181,7 +181,7 @@ const Home = () => {
               className="text-primary-light"
               href="https://www.ieee.org/conferences/publishing/templates.html"
             >
-              IEEE Paper Review Process
+              IEEE Manuscript Templates for Conference Proceedings
             </a>
           </p>
         </div>
