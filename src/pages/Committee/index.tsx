@@ -1,76 +1,10 @@
 import Footer from '../../components/Footer';
 import Sponsors from '../../components/Sponsors';
 import { useState } from 'react';
+import { sections } from '../../../data';
 
 const Committee = ({ isComponent = false }) => {
-  const sections = [
-    {
-      title: 'Executive Committee',
-      src: [
-        '/executive/executive-1.png',
-        '/executive/executive-2.png',
-        '/executive/executive-3.png',
-        '/executive/executive-4.png',
-        '/executive/executive-5.png',
-        '/executive/executive-6.png'
-      ]
-    },
-    {
-      title: 'Marketing Committee',
-      src: [
-        '/marketing/marketing-1.png',
-        '/marketing/marketing-2.png',
-        '/marketing/marketing-3.png',
-        '/marketing/marketing-4.png',
-        '/marketing/marketing-5.png',
-        '/marketing/marketing-6.png'
-      ]
-    },
-    {
-      title: 'Finance Committee',
-      src: [
-        '/finance/finance-1.png',
-        '/finance/finance-2.png',
-        '/finance/finance-3.png',
-        '/finance/finance-4.png',
-        '/finance/finance-5.png',
-        '/finance/finance-6.png'
-      ]
-    },
-    {
-      title: 'Technical Programme Committee',
-      src: [
-        '/technical/technical-1.png',
-        '/technical/technical-2.png',
-        '/technical/technical-3.png',
-        '/technical/technical-4.png',
-        '/technical/technical-5.png',
-        '/technical/technical-6.png',
-        '/technical/technical-7.png',
-        '/technical/technical-8.png',
-        '/technical/technical-9.png',
-        '/technical/technical-10.png',
-        '/technical/technical-11.png',
-        '/technical/technical-12.png',
-        '/technical/technical-13.png',
-        '/technical/technical-14.png',
-        '/technical/technical-15.png',
-        '/technical/technical-16.png',
-        '/technical/technical-17.png',
-        '/technical/technical-18.png',
-        '/technical/technical-19.png',
-        '/technical/technical-20.png',
-        '/technical/technical-21.png',
-        '/technical/technical-22.png',
-        '/technical/technical-23.png',
-        '/technical/technical-24.png'
-      ]
-    }
-  ];
-
   const [active, setActive] = useState(0);
-
-  console.log(active);
 
   return (
     <section className="md:mt-10">
@@ -106,10 +40,6 @@ const Committee = ({ isComponent = false }) => {
             </h1>
           </div>
         )}
-
-        <div className="text-center helvetica-light md:text-xl">
-          We are bringing the finest industry experts to speak
-        </div>
 
         {/* Buttons for sections */}
         <div className="flex flex-col md:flex-row items-start md:items-center text-xs mt-5 mx-auto w-fit">
