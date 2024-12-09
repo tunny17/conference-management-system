@@ -93,7 +93,7 @@ const Home = () => {
               key={index}
               className="bg-blue-50 px-5 py-7 w-full md:w-[30%] rounded-lg hover:scale-105 hover:bg-[#FFF0F0] duration-300 transition-all"
             >
-              <h1 className="text-lg font-medium h-16">{item.title}</h1>
+              <h1 className="text-lg font-medium pb-5 md:pb-0 md:h-16">{item.title}</h1>
 
               <ul className="list-disc pl-4 mb-5">
                 {item.nav.map((item, index) => (

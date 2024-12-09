@@ -42,7 +42,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="h-[90vh] relative">
+    <div className="md:h-[90vh] h-[100vh] relative">
       <HeroCarousel images={images} interval={1100} height="h-[90vh]" />
 
       <div className="absolute top-0 left-0 w-full h-full bg-black inset-0 bg-opacity-40 text-white py-20 flex flex-col justify-start items-center text-center md:text-left">
