@@ -115,12 +115,12 @@ const Navigation = () => {
           </ul>
         </nav>
 
-        <a
-          href="/papers"
+        <Link
+          to="/papers"
           className="hidden md:block no-underline bg-primary-light text-base py-4 px-9 text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Call for Paper
-        </a>
+        </Link>
 
         <button type="button" onClick={() => setShowNav(true)} className="w-5 block md:hidden">
           <svg viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">

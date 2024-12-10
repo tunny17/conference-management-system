@@ -109,16 +109,15 @@ const MobileNavigation = () => {
           </ul>
         </nav>
 
-        <button
-          type="button"
+        <Link
+          to={`/papers`}
           onClick={() => {
             setShowNav(false);
-            window.open('/papers');
           }}
           className="md:hidden mt-5 block bg-primary-light text-sm p-3 w-full text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Call for Paper
-        </button>
+        </Link>
       </div>
     </div>
   );
