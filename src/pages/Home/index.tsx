@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Hero from '../Hero';
 import Footer from '../../components/Footer';
 import Committee from '../Committee/index.tsx';
-import Speakers from '../Speakers/index.tsx';
+// import Speakers from '../Speakers/index.tsx';
 import { slider, previewConferences, important } from '../../../data.ts';
 
 const Home = () => {
