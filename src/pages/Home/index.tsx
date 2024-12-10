@@ -265,7 +265,7 @@ const Home = () => {
           <img src="/speakers/speaker-3.png" alt="" className="w-full md:w-[27%]" />
         </div>
       </section> */}
-      <Speakers isHome={true} />
+      {/* <Speakers isHome={true} /> */}
 
       {/* --- past conferences */}
       <section className="text-left mt-20 py-10 px-[6%] bg-[#FAFDFF]">
