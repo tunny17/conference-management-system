@@ -242,9 +242,9 @@ const Home = () => {
         </div>
       </section> */}
 
-      <section className="">
+      {/* <section className="">
         <img src="/page-breaker.svg" alt="" />
-      </section>
+      </section> */}
 
       <Committee isComponent={true} />
 

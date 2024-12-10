@@ -116,7 +116,7 @@ const Navigation = () => {
         </nav>
 
         <a
-          href="/call-for-papers"
+          href="/papers"
           className="hidden md:block no-underline bg-primary-light text-base py-4 px-9 text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Call for Paper

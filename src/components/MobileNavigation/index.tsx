@@ -111,7 +111,10 @@ const MobileNavigation = () => {
 
         <button
           type="button"
-          onClick={() => setShowNav(false)}
+          onClick={() => {
+            setShowNav(false);
+            window.open('/papers');
+          }}
           className="md:hidden mt-5 block bg-primary-light text-sm p-3 w-full text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Call for Paper
