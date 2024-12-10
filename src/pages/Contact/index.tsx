@@ -1,34 +1,34 @@
 import Footer from '../../components/Footer';
 
 const Contact = () => {
-  const faq = [
-    {
-      question: 'What shipping options do you have?',
-      answer:
-        'For USA domestic orders we offer FedEx and USPS shipping. Contact us via email to learn more.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'Any method of payments acceptable by you. For example: We accept MasterCard, Visa.'
-    },
-    {
-      question: 'How long does it take to ship my order?',
-      answer: 'Orders are usually shipped within 1-2 business days after placing the order.'
-    },
-    {
-      question: 'What shipping options do you have?',
-      answer:
-        'For USA domestic orders we offer FedEx and USPS shipping. Contact us via email to learn more.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'Any method of payments acceptable by you. For example: We accept MasterCard, Visa.'
-    },
-    {
-      question: 'How long does it take to ship my order?',
-      answer: 'Orders are usually shipped within 1-2 business days after placing the order.'
-    }
-  ];
+  // const faq = [
+  //   {
+  //     question: 'What shipping options do you have?',
+  //     answer:
+  //       'For USA domestic orders we offer FedEx and USPS shipping. Contact us via email to learn more.'
+  //   },
+  //   {
+  //     question: 'What payment methods do you accept?',
+  //     answer: 'Any method of payments acceptable by you. For example: We accept MasterCard, Visa.'
+  //   },
+  //   {
+  //     question: 'How long does it take to ship my order?',
+  //     answer: 'Orders are usually shipped within 1-2 business days after placing the order.'
+  //   },
+  //   {
+  //     question: 'What shipping options do you have?',
+  //     answer:
+  //       'For USA domestic orders we offer FedEx and USPS shipping. Contact us via email to learn more.'
+  //   },
+  //   {
+  //     question: 'What payment methods do you accept?',
+  //     answer: 'Any method of payments acceptable by you. For example: We accept MasterCard, Visa.'
+  //   },
+  //   {
+  //     question: 'How long does it take to ship my order?',
+  //     answer: 'Orders are usually shipped within 1-2 business days after placing the order.'
+  //   }
+  // ];
 
   return (
     <section className="md:mt-10">
@@ -67,19 +67,19 @@ const Contact = () => {
               <img src="/email.svg" alt="" className="w-9" />
 
               <h1 className="text mt-3">Contact </h1>
-              <p className="text my-1">Prof. Rajashree Paul</p>
-              <p className="helvetica-regular text-sm">rajashree.paul@iem.edu.in</p>
+              <p className="text my-1">Amahle Khumalo</p>
+              <p className="helvetica-regular text-sm">ictas@dut.ac.za</p>
             </div>
-
+            {/* 
             <div>
               <img src="/phone.svg" alt="" className="w-9" />
 
               <h1 className="text mt-3">Phone </h1>
               <p className="helvetica-regular text-sm">+7-843-672-431</p>
-            </div>
+            </div> */}
           </div>
 
-          <div className="w-full md:w-[40%] shadow-md rounded-md p-7">
+          {/* <div className="w-full md:w-[40%] shadow-md rounded-md p-7">
             <div>
               <p className="text-sm text-primary-light font-medium mb-1">Email</p>
               <input
@@ -111,7 +111,7 @@ const Contact = () => {
             >
               Send
             </button>
-          </div>
+          </div> */}
         </div>
 
         <section className="flex flex-col md:flex-row items-start mt-10 md:h-[55vh] h-[50vh] overflow-hidden">
@@ -128,7 +128,7 @@ const Contact = () => {
           <img src="/map.png" className="h-full" alt="" />
         </section>
 
-        <section className="mt-10 md:px-10">
+        {/* <section className="mt-10 md:px-10">
           <h2 className="text-2xl md:text-4xl font-extrabold">Frequently Asked Questions</h2>
           <p className="w-full md:w-[70%] mt-3">
             Flex is the only saas business platform that lets you run your business on one platform,
@@ -143,8 +143,8 @@ const Contact = () => {
                 <p className="text-[#2A3342] leading-5 text-xs helvetica-light">{data.answer}</p>
               </div>
             ))}
-          </div>
-        </section>
+          </div> 
+        </section> */}
       </section>
 
       <div className="mt-5">

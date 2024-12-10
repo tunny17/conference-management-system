@@ -46,10 +46,10 @@ const Hero = () => {
       <HeroCarousel images={images} interval={1100} height="h-[90vh]" />
 
       <div className="absolute top-0 left-0 w-full h-full bg-black inset-0 bg-opacity-40 text-white py-20 flex flex-col justify-start items-center text-center md:text-left">
-        <h3>IEEE Conference on Information Communications Technology and Society (ICTAS)</h3>
+        {/* <h3>IEEE Conference on Information Communications Technology and Society (ICTAS)</h3> */}
         <h3 className="my-5">Theme:</h3>
         <h1 className="text-2xl md:text-5xl w-[80%] text-center">
-          2025 Conference on Information Communications Technology and Society, ICTAS
+          2025 IEEE Conference on Information Communications Technology and Society (ICTAS)
         </h1>
 
         <div className="flex flex-col md:flex-row gap-y-3 justify-between items-start md:items-center md:w-[45%] my-7 text-sm">

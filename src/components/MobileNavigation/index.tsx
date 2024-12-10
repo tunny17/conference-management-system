@@ -5,9 +5,16 @@ import { AppContext } from '../../context/AppContext';
 const MobileNavigation = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-  const { setShowDropdown, showDropdown, setShowNav } = useContext(AppContext);
+  const { setShowNav } = useContext(AppContext);
+  // const { setShowDropdown, showDropdown, setShowNav } = useContext(AppContext);
 
   const navs = [
+    {
+      title: 'ICTAS 2025',
+      isDropDown: false,
+      path: '/',
+      isAbout: false
+    },
     {
       title: 'About ICTAS',
       isDropDown: false,
@@ -32,12 +39,12 @@ const MobileNavigation = () => {
     //   path: '/schedule',
     //   isAbout: false
     // },
-    {
-      title: 'Donate',
-      isDropDown: false,
-      path: '/donate',
-      isAbout: false
-    },
+    // {
+    //   title: 'Donate',
+    //   isDropDown: false,
+    //   path: '/donate',
+    //   isAbout: false
+    // },
     {
       title: 'Contact Us',
       isDropDown: false,
@@ -47,7 +54,7 @@ const MobileNavigation = () => {
     {
       title: 'Register',
       isDropDown: false,
-      path: '/register',
+      path: '/',
       isAbout: false
     }
   ];
@@ -66,7 +73,7 @@ const MobileNavigation = () => {
         </div>
 
         <nav className="flex flex-col mt-10 items-center gap-8 md:hidden">
-          <button
+          {/* <button
             type="button"
             onClick={() => {
               setShowDropdown(!showDropdown);
@@ -85,7 +92,7 @@ const MobileNavigation = () => {
                 />
               </svg>
             </span>
-          </button>
+          </button> */}
 
           <ul className="flex flex-col items-start gap-8">
             {navs.map((nav) => (

@@ -6,9 +6,16 @@ import { AppContext } from '../../context/AppContext';
 const Navigation = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-  const { setShowDropdown, showDropdown, setShowNav } = useContext(AppContext);
+  // const { setShowDropdown, showDropdown, setShowNav } = useContext(AppContext);
+  const { setShowNav } = useContext(AppContext);
 
   const navs = [
+    {
+      title: 'ICTAS 2025',
+      isDropDown: false,
+      path: '/',
+      isAbout: false
+    },
     {
       title: 'About ICTAS',
       isDropDown: false,
@@ -33,12 +40,12 @@ const Navigation = () => {
     //   path: '/schedule',
     //   isAbout: false
     // },
-    {
-      title: 'Donate',
-      isDropDown: false,
-      path: '/donate',
-      isAbout: false
-    },
+    // {
+    //   title: 'Donate',
+    //   isDropDown: false,
+    //   path: '/donate',
+    //   isAbout: false
+    // },
     {
       title: 'Contact Us',
       isDropDown: false,
@@ -48,7 +55,7 @@ const Navigation = () => {
     {
       title: 'Register',
       isDropDown: false,
-      path: '/register',
+      path: '/',
       isAbout: false
     }
   ];
@@ -70,7 +77,7 @@ const Navigation = () => {
         </Link>
 
         <nav className="md:flex items-center gap-7 hidden">
-          <button
+          {/* <button
             type="button"
             onClick={() => setShowDropdown(!showDropdown)}
             className={`text-base flex items-center gap-4 ${
@@ -86,7 +93,7 @@ const Navigation = () => {
                 />
               </svg>
             </span>
-          </button>
+          </button> */}
 
           <ul className="flex items-center gap-7">
             {navs.map((nav, i) => (

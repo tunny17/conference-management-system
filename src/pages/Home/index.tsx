@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import Hero from '../Hero';
 import Footer from '../../components/Footer';
-import VideoSlider from '../../components/VideoSwiper';
+// import VideoSlider from '../../components/VideoSwiper';
 
-import { slider, days, dayOne, previewConferences, videoUrls } from '../../../data.ts';
-import Sponsors from '../../components/Sponsors/index.tsx';
+import { slider, previewConferences } from '../../../data.ts';
+// import Sponsors from '../../components/Sponsors/index.tsx';
 import Carousel from '../../components/Carousel/index.tsx';
 import Committee from '../Committee/index.tsx';
 import Speakers from '../Speakers/index.tsx';
 
 const Home = () => {
-  const [activeDate, setActiveDate] = useState('day one');
+  // const [activeDate, setActiveDate] = useState('day one');
 
   const images = [
     '/new-images/image-1.jpeg',
@@ -192,7 +192,7 @@ const Home = () => {
       </section>
 
       {/* conference schedule --- */}
-      <section className="bg-schedule h-[100vh] bg-cover bg-center bg-[#FAFDFF] px-[6%] mb-10 py-10">
+      {/* <section className="bg-schedule h-[100vh] bg-cover bg-center bg-[#FAFDFF] px-[6%] mb-10 py-10">
         <h1 className="text-3xl font-bold text-secondary-light">Conference Schedule</h1>
         <p className="mt-5 helvetia-light">
           Schedules planned out for the Event. The detailed list of event for the conference 2024
@@ -240,7 +240,7 @@ const Home = () => {
             View More
           </button>
         </div>
-      </section>
+      </section> */}
 
       <section className="">
         <img src="/page-breaker.svg" alt="" />
@@ -286,16 +286,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="text-left mt-20 py-10 mb-5 px-[6%] bg-[#FAFDFF]">
+      {/* <section className="text-left mt-20 py-10 mb-5 px-[6%] bg-[#FAFDFF]">
         <h1 className="text-3xl font-bold text-secondary-light">Videos</h1>
         <p className="mt-3 helvetica-regular w-[80%]">
           Watch and experience past editions of our conference
         </p>
 
         <VideoSlider videos={videoUrls} />
-      </section>
+      </section> */}
 
-      <Sponsors />
+      {/* <Sponsors /> */}
 
       <Footer />
     </div>
