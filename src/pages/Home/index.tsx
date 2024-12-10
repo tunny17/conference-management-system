@@ -4,7 +4,7 @@ import Hero from '../Hero';
 import Footer from '../../components/Footer';
 // import VideoSlider from '../../components/VideoSwiper';
 
-import { slider, previewConferences } from '../../../data.ts';
+import { slider, previewConferences, important } from '../../../data.ts';
 // import Sponsors from '../../components/Sponsors/index.tsx';
 import Carousel from '../../components/Carousel/index.tsx';
 import Committee from '../Committee/index.tsx';
@@ -56,7 +56,21 @@ const Home = () => {
         <div className="flex flex-col gap-y-9 md:flex-row justify-between items-center w-[90%] mx-auto">
           {/* <img src="/ictas.png" alt="" className="w-full md:w-[40%]" /> */}
           <div className="w-full md:w-[40%]">
-            <Carousel images={images} interval={5000} />
+            <div className="flex flex-col shadow-md p-2 w-full bg-white px-5  h-fit rounded-md">
+              <h2 className="font-bold my-4">Important Dates</h2>
+
+              {important.map((item, i) => (
+                <div
+                  key={i}
+                  className="text-[#1D2026] py-2 text-xs flex justify-between items-center"
+                >
+                  <div className="flex items-center justify-between w-full">
+                    <span> {item.text} </span>
+                    <span className="text-xs helvetica-light">{item.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="w-full md:w-[50%]">
