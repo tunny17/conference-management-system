@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext } from 'react';
 import { Link, useLocation } from 'react-router';
 import { AppContext } from '../../context/AppContext';
@@ -59,6 +60,15 @@ const MobileNavigation = () => {
     }
   ];
 
+  const scrollToSection = (id: any) => {
+    const targetElement = document.querySelector(id);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Update the hash in the URL for consistency
+    window.history.pushState(null, '', id);
+  };
+
   return (
     <div className="h-auto bg-black z-[2000] fixed top-0 left-0 bg-opacity-50 inset-0 py-5">
       <div className="flex flex-col items-start w-[95vw] px-5 md:px-10 mx-auto py-3 bg-white h-[70vh] rounded-md">
@@ -110,9 +120,10 @@ const MobileNavigation = () => {
         </nav>
 
         <Link
-          to={`/papers`}
+          to={`/#papers`}
           onClick={() => {
             setShowNav(false);
+            scrollToSection('#papers');
           }}
           className="md:hidden mt-5 block bg-primary-light text-sm p-3 w-full text-white rounded-md hover:scale-95 duration-300 transition-all"
         >

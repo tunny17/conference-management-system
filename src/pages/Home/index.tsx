@@ -2,25 +2,11 @@ import { useEffect } from 'react';
 
 import Hero from '../Hero';
 import Footer from '../../components/Footer';
-// import VideoSlider from '../../components/VideoSwiper';
-
-import { slider, previewConferences, important } from '../../../data.ts';
-// import Sponsors from '../../components/Sponsors/index.tsx';
-import Carousel from '../../components/Carousel/index.tsx';
 import Committee from '../Committee/index.tsx';
 import Speakers from '../Speakers/index.tsx';
+import { slider, previewConferences, important } from '../../../data.ts';
 
 const Home = () => {
-  // const [activeDate, setActiveDate] = useState('day one');
-
-  const images = [
-    '/new-images/image-1.jpeg',
-    '/new-images/image-2.jpeg',
-    '/new-images/image-3.jpeg',
-    '/new-images/image-4.jpeg',
-    '/new-images/image-5.jpeg'
-  ];
-
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
@@ -92,7 +78,7 @@ const Home = () => {
       </section>
 
       {/* --- call for paper */}
-      <section className="px-[6%] py-10 bg-[#FAFDFF]">
+      <section id="papers" className="px-[6%] py-10 bg-[#FAFDFF]">
         <div>
           <h1 className="text-3xl font-bold text-secondary-light">Call for Paper</h1>
         </div>

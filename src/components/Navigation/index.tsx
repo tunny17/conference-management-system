@@ -116,7 +116,10 @@ const Navigation = () => {
         </nav>
 
         <Link
-          to="/papers"
+          to="/#papers"
+          onClick={() => {
+            scrollToSection('#papers');
+          }}
           className="hidden md:block no-underline bg-primary-light text-base py-4 px-9 text-white rounded-md hover:scale-95 duration-300 transition-all"
         >
           Call for Paper
