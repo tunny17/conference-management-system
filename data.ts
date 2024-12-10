@@ -273,28 +273,24 @@ export const speakers = [
 
 export const important = [
   {
-    text: 'Full Paper Submission:',
-    date: '3rd April, 2024'
+    text: 'SUBMISSION DEADLINES:',
+    date: 'March 28th, 2025'
   },
   {
-    text: 'Acceptance Notification:',
-    date: '19th April, 2024'
+    text: 'NOTIFICATION',
+    date: 'April 25th, 2025'
   },
   {
-    text: 'Final Paper Submission:',
-    date: '12th May, 2024'
+    text: 'CAMERA READY',
+    date: 'June 27th, 2025'
   },
   {
-    text: 'Early Bird Registration:',
-    date: '3rd May, 2024'
+    text: 'REGISTRATION',
+    date: 'June 27th, 2025'
   },
   {
-    text: 'Presentation Submission:',
-    date: '12th May, 2024'
-  },
-  {
-    text: 'Conference',
-    date: '29-31 May, 2024'
+    text: 'CONFERENCE',
+    date: 'July 23rd - 25th, 2025'
   }
 ];
 
